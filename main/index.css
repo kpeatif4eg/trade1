@@ -1,0 +1,62 @@
+.aside{
+	background-color: red;
+	flex-shrink: 2;
+	flex-basis: 162px;
+	background-image: linear-gradient(to left, #22386b 0%, #192249 100%);
+	color: #ffffff;
+	font-family:'Stolzl', sans-serif;
+}
+.header{
+	position: relative;
+}
+body{
+	display: flex;
+}
+.menu__button{
+	color: #ffffff;
+	font-family: 'Stolzl';
+	font-size: 12px;
+	border: 0;
+	background-color: transparent;
+	padding-left: 39px;
+	white-space: nowrap;
+}
+.main-content{
+	/* width: 100%; */
+	flex-basis: 95%;
+	flex-shrink: 5;
+	height: 100vh;
+	background-color: blue;
+}
+.logo{
+	width: 40px;
+	display: block;
+	padding: 20px 0;
+	margin: 0 auto;
+}
+.positioned-header-bar{
+	/*position: absolute;*/
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: #fff;
+}
+.user{
+	display: flex;
+	justify-content: space-around;
+}
+.user__avatar{
+	width: 30px;
+	height: 30px;
+}
+.user__name{
+	width: 50%;
+}
+.content{
+	width: 100%;
+	padding: 50px;
+	box-sizing: border-box;
+}
+
