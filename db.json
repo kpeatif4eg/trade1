@@ -1,6 +1,6 @@
 
 {"apiKey":"jxsFcOR9wZ0AlyrKAazetOneOKPvPDbQA2KDQjyqCTMw2aa3Ecb5C5n5hgLRA2pB","balance":"0.00494989"}
-{"bitt":49.44734}
+{"bitt":"49.44734"}
 {"address":"1JJpgbP13FM4SvGk5KVZRfbe34dPdoVfQa"} 
 
 
@@ -9,7 +9,7 @@
    "subscriptions":[
       {
          "trader":{
-            "id":2,
+            "id":"2",
             "nickName":"sedtorf",
             "firstName":"Anthony",
             "lastName":"Baker",
@@ -19,37 +19,37 @@
             "birthDate":"1998-11-22",
             "registrationDate":"2019-03-17",
             "traderWallet":{
-               "id":3,
+               "id":"3",
                "address":"18hXzcH7wNqvwqY3tShfXbTYaWguu7FFhH"
             },
-            "filename":null,
+            "filename":"null",
             "risks":"HIGH",
-            "profit":17.0,
-            "available":39.44,
-            "minDays":28,
-            "investorsQuantity":8,
+            "profit":"17.0",
+            "available":"39.44",
+            "minDays":"28",
+            "investorsQuantity":"8",
             "rialtos":[
                {
-                  "id":2,
+                  "id":"2",
                   "name":"Binance",
-                  "balance":1358979367,
-                  "profit":15.78,
-                  "ordersByDay":86
+                  "balance":"1358979367",
+                  "profit":"15.78",
+                  "ordersByDay":"86"
                }
             ],
-            "apiKey":null,
-            "secretKey":null
+            "apiKey":"null",
+            "secretKey":"null"
          },
-         "stopLoss":15,
-         "days":21,
-         "coins":1347500,
-         "profit":0.0,
+         "stopLoss":"15",
+         "days":"21",
+         "coins":"1347500",
+         "profit":"0.0",
          "endDate":"2019-06-25",
          "type":"TradeOne"
       },
       {
          "trader":{
-            "id":4,
+            "id":"4",
             "nickName":"sedcorf",
             "firstName":"Daniel",
             "lastName":"Morgan",
@@ -59,31 +59,31 @@
             "birthDate":"1998-11-22",
             "registrationDate":"2019-03-17",
             "traderWallet":{
-               "id":5,
+               "id":"5",
                "address":"18hXzcH7wNqvwqY3tShfXbTYaWguu7FFhH"
             },
-            "filename":null,
+            "filename":"null",
             "risks":"MEDIUM",
-            "profit":23.0,
-            "available":46.15,
-            "minDays":14,
-            "investorsQuantity":13,
+            "profit":"23.0",
+            "available":"46.15",
+            "minDays":"14",
+            "investorsQuantity":"13",
             "rialtos":[
                {
-                  "id":4,
+                  "id":"4",
                   "name":"Binance",
-                  "balance":1836572406,
-                  "profit":21.63,
-                  "ordersByDay":76
+                  "balance":"1836572406",
+                  "profit":"21.63",
+                  "ordersByDay":"76"
                }
             ],
-            "apiKey":null,
-            "secretKey":null
+            "apiKey":"null",
+            "secretKey":"null"
          },
-         "stopLoss":15,
-         "days":21,
-         "coins":1292800,
-         "profit":0.0,
+         "stopLoss":"15",
+         "days":"21",
+         "coins":"1292800",
+         "profit":"0.0",
          "endDate":"2019-06-25",
          "type":"TradeOne"
       }
@@ -94,22 +94,22 @@
 {
     "history": [
         {
-            "id": 1,
+            "id": "1",
             "firstName": "Daniel",
             "lastName": "Morgan",
             "date": "2019-04-02",
             "pair": "BTC/BITT",
-            "price": 400,
+            "price": "400",
             "investors": "Binance",
             "type": "SELL"
         },
         {
-            "id": 2,
+            "id": '2',
             "firstName": "John",
             "lastName": "Wilson",
             "date": "2019-04-03",
             "pair": "BTC/BITT",
-            "price": 450,
+            "price": "450",
             "investors": "Bittrex",
             "type": "BUY"
         }
@@ -120,202 +120,202 @@
 {
    "traders":[
       {
-         "id":1,
+         "id":"1",
          "firstname":"William",
          "lastname":"Hill",
          "risk":"LOW",
-         "profit":29.0,
-         "available":47.15,
-         "investors":19,
+         "profit":"29.0",
+         "available":"47.15",
+         "investors":"19",
          "rialtos":[
             {
-               "id":1,
+               "id":"1",
                "name":"Binance",
-               "balance":863452217,
-               "profit":23.26,
-               "ordersByDay":37
+               "balance":"863452217",
+               "profit":"23.26",
+               "ordersByDay":"37"
             }
          ],
-         "minDays":21
+         "minDays":'21'
       },
       {
-         "id":2,
+         "id":"2",
          "firstname":"Anthony",
          "lastname":"Baker",
          "risk":"HIGH",
-         "profit":17.0,
-         "available":39.44,
-         "investors":8,
+         "profit":"17.0",
+         "available":"39.44",
+         "investors":"8",
          "rialtos":[
             {
-               "id":2,
+               "id":"2",
                "name":"Binance",
-               "balance":1358979367,
-               "profit":15.78,
-               "ordersByDay":86
+               "balance":"1358979367",
+               "profit":"15.78",
+               "ordersByDay":"86"
             }
          ],
-         "minDays":28
+         "minDays":"28"
       },
       {
-         "id":3,
+         "id":"3",
          "firstname":"Denis",
          "lastname":"Kravec",
          "risk":"LOW",
-         "profit":19.7,
-         "available":44.26,
-         "investors":21,
+         "profit":"19.7",
+         "available":"44.26",
+         "investors":"21",
          "rialtos":[
             {
-               "id":3,
+               "id":"3",
                "name":"Binance",
-               "balance":1698242531,
-               "profit":18.21,
-               "ordersByDay":95
+               "balance":"1698242531",
+               "profit":"18.21",
+               "ordersByDay":"95"
             }
          ],
-         "minDays":21
+         "minDays":"21"
       },
       {
-         "id":4,
+         "id":"4",
          "firstname":"Daniel",
          "lastname":"Morgan",
          "risk":"MEDIUM",
-         "profit":23.0,
-         "available":46.15,
-         "investors":13,
+         "profit":"23.0",
+         "available":"46.15",
+         "investors":"13",
          "rialtos":[
             {
-               "id":4,
+               "id":"4",
                "name":"Binance",
-               "balance":1836572406,
-               "profit":21.63,
-               "ordersByDay":76
+               "balance":"1836572406",
+               "profit":"21.63",
+               "ordersByDay":"76"
             }
          ],
-         "minDays":14
+         "minDays":"14"
       },
       {
-         "id":5,
+         "id":"5",
          "firstname":"James",
          "lastname":"Green",
          "risk":"MEDIUM",
-         "profit":11.0,
-         "available":37.13,
-         "investors":8,
+         "profit":"11.0",
+         "available":"37.13",
+         "investors":"8",
          "rialtos":[
             {
-               "id":10,
+               "id":"10",
                "name":"Binance",
-               "balance":995823620,
-               "profit":16.52,
-               "ordersByDay":77
+               "balance":"995823620",
+               "profit":"16.52",
+               "ordersByDay":"77"
             },
             {
-               "id":5,
+               "id":"5",
                "name":"Bittrex",
-               "balance":934785457,
-               "profit":2.89,
-               "ordersByDay":69
+               "balance":"934785457",
+               "profit":"2.89",
+               "ordersByDay":"69"
             }
          ],
-         "minDays":21
+         "minDays":"21"
       },
       {
-         "id":6,
+         "id":"6",
          "firstname":"Petr",
          "lastname":"Samoilov",
          "risk":"LOW",
-         "profit":22.0,
-         "available":26.32,
-         "investors":9,
+         "profit":"22.0",
+         "available":"26.32",
+         "investors":"9",
          "rialtos":[
             {
-               "id":6,
+               "id":"6",
                "name":"Binance",
-               "balance":1678592064,
-               "profit":19.67,
-               "ordersByDay":81
+               "balance":"1678592064",
+               "profit":"19.67",
+               "ordersByDay":"81"
             }
          ],
-         "minDays":28
+         "minDays":"28"
       },
       {
-         "id":7,
+         "id":"7",
          "firstname":"John",
          "lastname":"Wilson",
          "risk":"MEDIUM",
-         "profit":16.0,
-         "available":46.88,
-         "investors":13,
+         "profit":"16.0",
+         "available":"46.88",
+         "investors":"13",
          "rialtos":[
             {
-               "id":8,
+               "id":"8",
                "name":"Bittrex",
-               "balance":978524216,
-               "profit":6.56,
-               "ordersByDay":93
+               "balance":"978524216",
+               "profit":"6.56",
+               "ordersByDay":"93"
             },
             {
-               "id":11,
+               "id":"11",
                "name":"Binance",
-               "balance":1269521784,
-               "profit":19.45,
-               "ordersByDay":91
+               "balance":"1269521784",
+               "profit":"19.45",
+               "ordersByDay":"91"
             }
          ],
-         "minDays":21
+         "minDays":"21"
       },
       {
-         "id":8,
+         "id":"8",
          "firstname":"Frank",
          "lastname":"Anderson",
          "risk":"HIGH",
-         "profit":-5.3,
-         "available":30.21,
-         "investors":9,
+         "profit":"-5.3",
+         "available":"30.21",
+         "investors":"9",
          "rialtos":[
             {
-               "id":7,
+               "id":"7",
                "name":"Binance",
-               "balance":1689242631,
-               "profit":-9.73,
-               "ordersByDay":129
+               "balance":"1689242631",
+               "profit":"-9.73",
+               "ordersByDay":"129"
             }
          ],
-         "minDays":14
+         "minDays":"14"
       },
       {
-         "id":9,
+         "id":"9",
          "firstname":"Nikolay",
          "lastname":"Sobolev",
          "risk":"HIGH",
-         "profit":25.0,
-         "available":43.18,
-         "investors":5,
+         "profit":"25.0",
+         "available":"43.18",
+         "investors":"5",
          "rialtos":[
             {
-               "id":9,
+               "id":"9",
                "name":"Binance",
-               "balance":1675235857,
-               "profit":23.12,
-               "ordersByDay":102
+               "balance":"1675235857",
+               "profit":"23.12",
+               "ordersByDay":"102"
             }
          ],
-         "minDays":28
+         "minDays":"28"
       },
       {
-         "id":10,
+         "id":"10",
          "firstname":"Vladimir",
          "lastname":"Novikov",
          "risk":"LOW",
-         "profit":0.0,
-         "available":50.0,
-         "investors":1,
+         "profit":"0.0",
+         "available":"50.0",
+         "investors":"1",
          "rialtos":[
 
          ],
-         "minDays":28
+         "minDays":"28"
       }
    ]
 }
