@@ -67,7 +67,6 @@ const render = (function(){
 	let jsonRes = {};
 
 	function request(url, callback, responseName){
-		console.log('sdsdsd')
 		let result;
 		return () =>{
 		 	fetch(url)
@@ -79,7 +78,6 @@ const render = (function(){
 			});
 		}
 	}
-	window.customRequest = request;
+	window.request = request();
 
 }());
-
