@@ -1,7 +1,12 @@
 .aside{
+	z-index: 10;
+	box-shadow: 0px 0px 10px #000;
 	background-color: red;
-	flex-shrink: 2;
-	flex-basis: 162px;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	width: 16.4%;
+	min-width: 141px;
 	background-image: linear-gradient(to left, #22386b 0%, #192249 100%);
 	color: #ffffff;
 	font-family:'Stolzl', sans-serif;
@@ -20,13 +25,12 @@ body{
 	background-color: transparent;
 	padding-left: 39px;
 	white-space: nowrap;
+	width:100%;
 }
 .main-content{
-	/* width: 100%; */
-	flex-basis: 95%;
-	flex-shrink: 5;
-	height: 100vh;
-	background-color: blue;
+	width: 83.5%;
+	transform: translateX(19.612%);
+	background-color: #f6f8fa;
 }
 .logo{
 	width: 40px;
@@ -35,12 +39,12 @@ body{
 	margin: 0 auto;
 }
 .positioned-header-bar{
-	/*position: absolute;*/
+
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
-	padding-top: 20px;
-	padding-bottom: 20px;
+	padding: 22px;
+	box-sizing: border-box;
 	background-color: #fff;
 }
 .user{
@@ -56,6 +60,7 @@ body{
 }
 .content{
 	width: 100%;
+	min-height: 80vh;
 	padding: 50px;
 	box-sizing: border-box;
 }

@@ -1,0 +1,27 @@
+.button-card{
+	font: 18px 'Stolzl';
+	margin: 0 auto;
+}
+.card{
+	text-align: center;
+	font-family: 'Stolzl', 'serif';
+	margin-top: 10px;
+	position: relative;
+	/*transition: .7s;*/
+	color: #fff;
+	border-radius: 10px;
+	justify-content: space-around;
+	box-sizing: border-box;
+	max-width: 48%;
+	height: 295px;
+	min-width: 320px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	background-color: #513fc2;
+	background-image: url(../images/2-layers2card_bg.png), linear-gradient(to right, #4e6ecd 0%, rgba(255, 123, 123, 0.68) 100%);
+	background-position: 100% 100%, center;
+	background-size: 100% 50%, cover;
+	background-repeat: no-repeat;
+	margin: 0 auto 100px;
+}

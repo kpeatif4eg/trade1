@@ -1,24 +1,40 @@
 
 const global = (function(){
-	let tmpl;
+	//in tpml keep 
+	let thisTmpl;
+	let thisJson;
 	return function(str){
 		return{
 			setTmpl(str){
-				tmpl = str;
+				thisTmpl = str;
 			},
 			getTmpl(){
-				return tmpl;
+				return thisTmpl;
+			},
+			setJson(json){
+				thisJson = json;
+			},
+			getJson(){
+				return thisJson;
 			}
 		}
 	}
 }())
 
 ;const commonContentHandler = (function(){
-	return{
-		nav: render.content('modules/Content/Navigation/index.js', '.content'),
-		trader: render.content('modules/Content/Trader/index.js', '.content'),
-		history: render.content('modules/Content/History/index.js', '.content'),
-		charge: render.content('modules/Content/Charge/index.js', '.content'),
+	//remove class 'selected' by all buttons before render
+	
+
+	return function(that){
+		[...elem.getElems('menu__button')].forEach(item =>{
+		elem.remCl(item.closest('li'), 'selected');
+		item.removeAttribute('disabled','');
+	});
+		return{
+		nav: render.content('modules/Content/Navigation/index.js', '.content', that),
+		trader: render.content('modules/Content/Trader/index.js', '.content', that),
+		history: render.content('modules/Content/History/index.js', '.content', that),
+		charge: render.content('modules/Content/Charge/index.js', '.content', that),
 		exit: function(){
 			// document.open(); 
 			// document.write("<p>Hello world!</p>");
@@ -27,29 +43,41 @@ const global = (function(){
 			// document.close();
 		}
 	}
+	}
 	
 }());
 
 
-(function(){
-	let jsonRes = {};
-	function request(url, callback, responseName){
-		let result;
-		return () =>{
-		 	fetch('https://jsonplaceholder.typicode.com/users')
-			.then(response =>{
-				return response.json();
-			})
-			.then(json =>{
-				jsonRes.test = json;
-			});
+const dataRequest = (function(){
 
+	return function(){
+
+		return {
+			request(url, callback){
+				let result;
+				 	fetch(url)
+					.then(response =>{
+						return response.json();
+					})
+					.then(json =>{
+						callback(json);
+					});	
+				},
+				getRequest(){
+					return jsonRes;
+				}
 		}
-		
-
-	}
-	window.request = request();
+}
 
 }());
 
+const D_setUserName = (json)=>{
+	// console.log(Json)
+	// let Json = JSON.parse(json);
+	elem.getEl('.first-name').textContent = json.firstname;
+	elem.getEl('.second-name').textContent = json.lastname;
 
+
+}
+
+dataRequest().request('db.json', D_setUserName);

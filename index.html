@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
   	<meta http-equiv="X-UA-Compatible" content="ie=edge">
   	<link rel="stylesheet" type="text/css" href="common/styles/fonts.css">
+  	<link rel="stylesheet" type="text/css" href="common/styles/common_styles.css">
   	<link rel="stylesheet" type="text/css" href="common/styles/reset.css">
   	<link rel="stylesheet" type="text/css" href="main/index.css">
 </head>
@@ -18,8 +19,8 @@
 
 		<div class="user">
 			<div class="user__name">
-				<span class="first_name">Ololosh</span>
-				<span class="second_name">Ololoev</span>
+				<span class="first-name">__</span>
+				<span class="second-name">__</span>
 			</div>
 			<img class="user__avatar" src="https://yt3.ggpht.com/a/AGF-l790ZGzS4Qw4FWGGEp6MQHqbWjxxvVeJhF7_sA=s900-mo-c-c0xffffffff-rj-k-no">
 		</div>
@@ -27,19 +28,19 @@
 		<nav class="menu">
 			<ul class="menu__items">
 				<li class="menu__nav-panel">
-					<button class="menu__button" loc="menu-btn1" onClick='commonContentHandler.nav()'>Navigation panel</button>
+					<button class="menu__button" loc="menu-btn1" onClick='commonContentHandler(this).nav()'>Navigation panel</button>
 				</li>
 				<li class="menu__my-trader">
-					<button class="menu__button" loc="menu-btn2" onClick='commonContentHandler.trader()'>My trader</button>
+					<button class="menu__button" loc="menu-btn2" onClick='commonContentHandler(this).trader()'>My trader</button>
 				</li>
 				<li class="menu__trade-history">
-					<button class="menu__button" loc="menu-btn3" onClick='commonContentHandler.history()'>History</button>
+					<button class="menu__button" loc="menu-btn3" onClick='commonContentHandler(this).history()'>History</button>
 				</li>
 				<li class="manu__charge">
-					<button class="menu__button" loc="menu-btn4" onClick='commonContentHandler.charge()'>Charge</button>
+					<button class="menu__button" loc="menu-btn4" onClick='commonContentHandler(this).charge()'>Charge</button>
 				</li>
 				<li class="exit menu__exit">
-					<button class="menu__button" loc="menu-btn5" onClick='commonContentHandler.exit()'>Exit</button>
+					<button class="menu__button" loc="menu-btn5" onClick='commonContentHandler(this).exit()'>Exit</button>
 				</li>
 			</ul>
 		</nav>

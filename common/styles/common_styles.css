@@ -1,0 +1,15 @@
+.button{
+	cursor: pointer;
+	border: 0;
+	outline: none;
+	padding: 13px;
+	border-radius: 26px;
+	background-color: #FFFFFF;
+}
+
+.hidden{
+	display: none !important;
+}
+li.selected{
+	background-color: red;
+}
