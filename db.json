@@ -131,7 +131,7 @@
                "ordersByDay":"37"
             }
          ],
-         "minDays":'21'
+         "minDays":21
       },
       {
          "id":2,
