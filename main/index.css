@@ -84,7 +84,7 @@ body{
 	}
 	object{
 		height: 20vh;
-    max-height: 70px;
+   		max-height: 70px;
 	}
 	.menu__button{
 		width: auto;
@@ -96,5 +96,14 @@ body{
 	.main-content{
 		width: 100%;
 		transform: translateX(0); 
+	}
+	.content{
+		padding: 20px 10px;
+	}
+	.header{
+		min-height: 76px;
+	}
+	.deposit-panel .overflow-container-deposit{
+		width: auto;
 	}
 }
