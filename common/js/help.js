@@ -82,11 +82,7 @@ const render = (function(){
 					
 					//по клику меню опускаем шторку меню если включена мобильная версия
 					if(global.getIsMobile()){
-						elem.getEl('.aside__content').classList.add('aside__content_dropdown');
-						//убираем высоту блока aside
-						setTimeout(()=>{
-							elem.getEl('.aside').style.height = '9.3333%';
-						}, 450)	
+						dropdownHandler.up();
 					}
 
 				}
