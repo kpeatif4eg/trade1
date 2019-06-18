@@ -52,9 +52,23 @@ const render = (function(){
 		content: function (srcPath, target, that){
 			
 			return function(){
-
-				elem.addCl(that.closest('li'), 'selected');
-				that.setAttribute('disabled', '');
+	//remove class 'selected' by all buttons before render
+				[...elem.getElems('menu__button')].forEach(item =>{
+					elem.remCl(item.closest('li'), 'selected');
+					item.removeAttribute('disabled','');
+				});
+	//проверяем что приходит в that, если по клику меню то идем через объект, если событие из другого объекта то
+	//от него передаем селектор стрингом
+				if(typeof that === 'object'){
+					elem.addCl(that.closest('li'), 'selected');
+					that.setAttribute('disabled', '');
+				}
+				else{ //получаем селектор если он пришел строкой и обрабатываем
+					const $elem = elem.getEl(that);
+					elem.addCl($elem.closest('li'), 'selected');
+					$elem.setAttribute('disabled', '');
+				}
+					
 
 				try{
 					elem.getEl('#tmpl').remove();
@@ -63,19 +77,25 @@ const render = (function(){
 				const response = elem.injectScript(srcPath);
 
 				response.onload = function(){
-					const getTempl = global().getTmpl;
+						
+					elem.append(global.getTmpl(), target);
 					
-						elem.append(getTempl(), target);						
-					
+					//по клику меню опускаем шторку меню если включена мобильная версия
+					if(global.getIsMobile()){
+						elem.getEl('.aside__content').classList.add('aside__content_dropdown');
+						//убираем высоту блока aside
+						setTimeout(()=>{
+							elem.getEl('.aside').style.height = '9.3333%';
+						}, 450)	
+					}
+
 				}
 			}
-		},
-		styles: function(srcPath){				//add link rel in head for each page
+		},	//add link rel in head for each module
+		styles: function(srcPath){				
 			const head = elem.getEl('head'),
 			link = document.createElement('link');
-
 			head.lastChild.remove();
-
 			link.setAttribute('rel', 'stylesheet');
 			link.setAttribute('type','text/css');
 			link.setAttribute('href', `${srcPath}/index.css`)
@@ -83,4 +103,5 @@ const render = (function(){
 		}
 	}
 }());
+
 

@@ -14,53 +14,53 @@
 	<aside class="aside">
 		<header class="header">
 			<object type="image/svg+xml" data='common/images/image.svg'></object>
-
 		</header>
-
-		<div class="user">
-			<div class="user__name">
-				<span class="first-name">__</span>
-				<span class="second-name">__</span>
+		<div class="aside__content">
+			<div class="user">
+				<div class="user__name">
+					<span class="first-name">__</span>
+					<span class="second-name">__</span>
+				</div>
+				<img class="user__avatar" src="https://yt3.ggpht.com/a/AGF-l790ZGzS4Qw4FWGGEp6MQHqbWjxxvVeJhF7_sA=s900-mo-c-c0xffffffff-rj-k-no">
 			</div>
-			<img class="user__avatar" src="https://yt3.ggpht.com/a/AGF-l790ZGzS4Qw4FWGGEp6MQHqbWjxxvVeJhF7_sA=s900-mo-c-c0xffffffff-rj-k-no">
-		</div>
 
-		<nav class="menu">
-			<ul class="menu__items">
-				<li class="menu__nav-panel">
-					<button class="menu__button" loc="menu-btn1" onClick='commonContentHandler(this).nav()'>Navigation panel</button>
-				</li>
-				<li class="menu__my-trader">
-					<button class="menu__button" loc="menu-btn2" onClick='commonContentHandler(this).trader()'>My trader</button>
-				</li>
-				<li class="menu__trade-history">
-					<button class="menu__button" loc="menu-btn3" onClick='commonContentHandler(this).history()'>History</button>
-				</li>
-				<li class="manu__charge">
-					<button class="menu__button" loc="menu-btn4" onClick='commonContentHandler(this).charge()'>Charge</button>
-				</li>
-				<li class="exit menu__exit">
-					<button class="menu__button" loc="menu-btn5" onClick='commonContentHandler(this).exit()'>Exit</button>
-				</li>
-			</ul>
-		</nav>
-		<div class="exchanges">
-			<span class="exchange-title" loc='nav-exch'>Rate</span>
-			<ul class="exchanges-list">
-				<li class="exchanges_item BTC">BTC
-				<span class="low">1</span>
-				=
-				$
-				<span class="exch-value">7862.43</span>
-				</li>
-				<li class="exchanges-item BITT">BITT
-				<span class="low">1</span>
-				=
-				$ 1
-				<span class="exch-value"></span>
-				</li>
-			</ul>
-    	</div>
+			<nav class="menu">
+				<ul class="menu__items">
+					<li class="menu__nav-panel">
+						<button class="menu__button" autofocus title="Navigation panel" loc="menu-btn1" onClick='commonContentHandler(this).nav()'>Navigation panel</button>
+					</li>
+					<li class="menu__my-trader">
+						<button class="menu__button" title="My trader" loc="menu-btn2" onClick='commonContentHandler(this).trader()'>My trader</button>
+					</li>
+					<li class="menu__trade-history">
+						<button class="menu__button" title="History" loc="menu-btn3" onClick='commonContentHandler(this).history()'>History</button>
+					</li>
+					<li class="menu__charge">
+						<button class="menu__button" title="Deposit" loc="menu-btn4" onClick='commonContentHandler(this).charge()'>Deposit</button>
+					</li>
+					<li class="exit menu__exit">
+						<button class="menu__button" title="Exit" loc="menu-btn5" onClick='commonContentHandler(this).exit()'>Exit</button>
+					</li>
+				</ul>
+			</nav>
+			<div class="exchanges">
+				<span class="exchange-title" loc='nav-exch'>Rate</span>
+				<ul class="exchanges-list">
+					<li class="exchanges_item BTC">BTC
+					<span class="low">1</span>
+					=
+					$
+					<span class="exch-value">7862.43</span>
+					</li>
+					<li class="exchanges-item BITT">BITT
+					<span class="low">1</span>
+					=
+					$ 1
+					<span class="exch-value"></span>
+					</li>
+				</ul>
+	    	</div>
+	    </div>
 	</aside>
 
 	<main class="main-content">
@@ -77,6 +77,7 @@
 			</div>
 
 			<article class="content"></article>
+
 	</main>
 	<script type="text/javascript" src="common/js/help.js"></script>
 	<script type="text/javascript" src="main/index.js"></script>

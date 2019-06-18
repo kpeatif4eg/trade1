@@ -11,5 +11,9 @@
 	display: none !important;
 }
 li.selected{
+	transition: .3s;
+	width:110%;
 	background-color: red;
 }
+
+	

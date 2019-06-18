@@ -1,0 +1,91 @@
+.deposit-buttons{
+	/*background-color: red;*/
+}
+.wallet{
+	display: inline-block;
+	width: 49.75%;
+	background-color: white;
+	margin-top: 30px;
+	margin-bottom: 10px;
+	border-radius: 20px;
+}
+.wallet__display:first-child{
+	margin-bottom: 20px;
+}
+.wallet__button, .qr__button{
+	float: right;
+	background-image: linear-gradient(to bottom, #4c61f2 0%, #7192fb 100%);
+	box-shadow: 1px 5px 9px -2px black;
+	min-width: 70px;
+	color: #fff;
+	font-weight: 700;
+}
+
+button.wallet__button.button {}
+.wallet__content{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px;
+}
+.overflow-container-deposit{
+	overflow: hidden;
+	width: 70%;
+	/*height: 123px;*/
+	margin: 0 auto;
+}
+.overflow-wraper-deposit{
+	width: 201%;
+	/* height: 200px; */
+	transition: .4s;
+	transform: translateX(0%);
+	display: flex;
+	justify-content: center;
+}
+.deposit-panel{
+	font-family: 'Stolzl','sans-serif'
+}
+.deposit-panel__title{
+	display: block;
+	padding: 11px 0 0 11px;
+}
+.exchange-item{
+	position: relative;
+	font-size: 24px;
+	color: #1f3262;
+	padding-left: 45px;
+}
+.exchange-item::before{
+	content: '';
+	display: inline-block;
+	width: 38px;
+	position: absolute;
+	left: -2px;
+	top: -7px;
+	height: 26px;
+	background-image: url('../../../common/images/icons/bitcoin-icon.jpg');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+}
+.exchange-item::after{
+	content: 'Coin';
+	display: inline-block;
+	position: absolute;
+	top: 22px;
+	left: 45px;
+	font-size: 18px;
+	opacity: 0.3;
+}
+.exchange-value{
+    font-size: 21px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-left: 18px;
+}
+.address-display{
+	    width: 70%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
