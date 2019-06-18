@@ -42,7 +42,6 @@ const global = (function(){
 }());
 
 const dataRequest = (function(){
-	return function(){
 		return {
 			request(url, callback){
 			 	fetch(url)
@@ -57,7 +56,6 @@ const dataRequest = (function(){
 				return jsonRes;
 			}
 		}
-	}
 }());
 
 (function(){
@@ -65,7 +63,7 @@ const dataRequest = (function(){
 		elem.getEl('.first-name').textContent = firstname;
 		elem.getEl('.second-name').textContent = lastname;
 	}
-	dataRequest().request('db.json', D_setUserName);
+	dataRequest.request('db.json', D_setUserName);
 
 }());
 
@@ -118,10 +116,42 @@ const dataRequest = (function(){
 			global.setIsMobile(false);
 			movingElememts({burger, lang}, parent);
 			//разворачиваем aside  на всю высоту и убираем шторку у aside__content
-			elem.getEl('.aside').style.height = '100%';
-			elem.getEl('.aside__content').classList.remove('aside__content_dropdown')
+			dropdownHandler.drop();
 		}
 	});
 
 
+}());
+
+const dropdownHandler = (function(){
+	const aside = elem.getEl('.aside'),
+			asideContent = elem.getEl('.aside__content');
+
+	const up = ()=>{
+		asideContent.classList.add('aside__content_dropdown');
+		setTimeout(()=>{
+			aside.style.height = '80px';
+			
+		},450)
+	}
+	const drop = ()=>{
+		aside.style.height = '100%';
+		asideContent.classList.remove('aside__content_dropdown');
+	}
+	const toggle = ()=>{
+		if(asideContent.classList.contains('aside__content_dropdown')){
+			drop();
+			
+		}
+		else{
+			up();
+		}
+	}
+
+	return{
+		up,
+		drop,
+		toggle,
+	}
+	
 }());
