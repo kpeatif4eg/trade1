@@ -25,3 +25,8 @@
 	background-repeat: no-repeat;
 	margin: 0 auto 100px;
 }
+@media (max-width: 800px){
+	.card{
+		min-width: 300px;
+	}
+}
