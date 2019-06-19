@@ -54,8 +54,9 @@ const render = (function(){
 			return function(){
 //при клике смещаем наш блок с контейнером вправо за экран
 				elem.addCl(elem.getEl(target), 'horiz-translate');
-		
-//делаем задержку 300мс что бы контейнет успел скрыться		
+				
+				const delayForMobile = global.getIsMobile() ? 350 : 0;
+//делаем задержку 'delay' что бы контейнет успел скрыться		
 				setTimeout(()=>{
 
 //удаляем класс 'selected' у всех кнопок перед рендером
@@ -88,7 +89,7 @@ const render = (function(){
 						setTimeout(()=>{
 							elem.remCl(elem.getEl(target), 'horiz-translate');
 
-						}, delay + 350)
+						}, delay + delayForMobile)
 //по клику меню поднимаем шторку меню если включена мобильная версия
 						if(global.getIsMobile()){
 							dropdownHandler.up();
