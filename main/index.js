@@ -116,11 +116,12 @@ const dropdownHandler = (function(){
 			asideContent = elem.getEl('.aside__content');
 
 	const up = ()=>{
-		asideContent.classList.add('aside__content_dropdown');
+		asideContent.className = 'aside__content aside__content_dropdown';
 		setTimeout(()=>{
+//убираем высоту aside 
 			aside.style.height = '80px';
 			
-		},500);
+		},400);
 	}
 	const drop = ()=>{
 		aside.style.height = '100%';
