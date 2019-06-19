@@ -84,11 +84,11 @@ const render = (function(){
 					response.onload = function(){
 //добавляем на темплейт в блок
 						elem.append(global.getTmpl(), target);
-//возвращаем его на место из за экрана
+//возвращаем его на место из за экрана и добавляем к задержке 300мс для последовательности анимаций
 						setTimeout(()=>{
 							elem.remCl(elem.getEl(target), 'horiz-translate');
 
-						}, delay)
+						}, delay + 350)
 //по клику меню поднимаем шторку меню если включена мобильная версия
 						if(global.getIsMobile()){
 							dropdownHandler.up();

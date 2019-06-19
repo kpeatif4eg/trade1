@@ -117,11 +117,7 @@ const dropdownHandler = (function(){
 
 	const up = ()=>{
 		asideContent.className = 'aside__content aside__content_dropdown';
-		setTimeout(()=>{
-//убираем высоту aside 
-			aside.style.pointerEvents = 'none';
-			
-		},400);
+		aside.style.pointerEvents = 'none';	
 	}
 	const drop = ()=>{
 		aside.style.pointerEvents = 'auto';
