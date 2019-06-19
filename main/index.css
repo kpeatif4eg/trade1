@@ -18,6 +18,7 @@
 }
 body{
 	display: flex;
+	overflow-x: hidden;
 }
 .menu__button{
 	color: #ffffff;

@@ -52,42 +52,53 @@ const render = (function(){
 		content: function (srcPath, target, that){
 			
 			return function(){
-	//remove class 'selected' by all buttons before render
-				[...elem.getElems('menu__button')].forEach(item =>{
-					elem.remCl(item.closest('li'), 'selected');
-					item.removeAttribute('disabled','');
-				});
-	//проверяем что приходит в that, если по клику меню то идем через объект, если событие из другого объекта то
-	//от него передаем селектор стрингом
-				if(typeof that === 'object'){
-					elem.addCl(that.closest('li'), 'selected');
-					that.setAttribute('disabled', '');
-				}
-				else{ //получаем селектор если он пришел строкой и обрабатываем
-					const $elem = elem.getEl(that);
-					elem.addCl($elem.closest('li'), 'selected');
-					$elem.setAttribute('disabled', '');
-				}
-					
+//при клике смещаем наш блок с контейнером вправо за экран
+				elem.getEl(target).style.transition = '.4s';
+				elem.getEl(target).style.transform = 'translateX(100%)';
+//делаем задержку 300мс что бы контейнет успел скрыться		
+				setTimeout(()=>{
 
-				try{
-					elem.getEl('#tmpl').remove();
-				} catch{};
-
-				const response = elem.injectScript(srcPath);
-
-				response.onload = function(){
-						
-					elem.append(global.getTmpl(), target);
-					
-					//по клику меню опускаем шторку меню если включена мобильная версия
-					if(global.getIsMobile()){
-						dropdownHandler.up();
+//удаляем класс 'selected' у всех кнопок перед рендером
+					[...elem.getElems('menu__button')].forEach(item =>{
+						elem.remCl(item.closest('li'), 'selected');
+						item.removeAttribute('disabled','');
+					});
+//проверяем что приходит в that, если по клику меню то идем через объект, если событие из другого объекта то
+//от него передаем селектор стрингом
+					if(typeof that === 'object'){
+						elem.addCl(that.closest('li'), 'selected');
+						that.setAttribute('disabled', '');
 					}
+					else{ //получаем селектор если он пришел строкой и обрабатываем
+						const $elem = elem.getEl(that);
+						elem.addCl($elem.closest('li'), 'selected');
+						$elem.setAttribute('disabled', '');
+					}
+						
 
-				}
+					try{
+						elem.getEl('#tmpl').remove();
+					} catch{};
+
+					const response = elem.injectScript(srcPath);
+					response.onload = function(){
+//добавляем на темплейт в блок
+						elem.append(global.getTmpl(), target);
+//возвращаем его на место из за экрана
+						setTimeout(()=>{
+							elem.getEl(target).style.transform = 'translateX(0)';
+
+						}, 300)
+//по клику меню поднимаем шторку меню если включена мобильная версия
+						if(global.getIsMobile()){
+							dropdownHandler.up();
+						}
+					}
+			  	}, 300);
 			}
-		},	//add link rel in head for each module
+
+		},	
+//add link rel in head for each module
 		styles: function(srcPath){				
 			const head = elem.getEl('head'),
 			link = document.createElement('link');
@@ -98,6 +109,24 @@ const render = (function(){
 			head.appendChild(link);
 		}
 	}
+
+
 }());
 
+const dataRequest = (function(){
+		return {
+			request(url, callback){
+			 	fetch(url)
+				.then(response =>{
+					return response.json();
+				})
+				.then(json =>{
+					callback(json);
+				});	
+			},
+			getRequest(){
+				return jsonRes;
+			}
+		}
+}());
 

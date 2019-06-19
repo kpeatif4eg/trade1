@@ -89,3 +89,21 @@ button.wallet__button.button {}
     overflow: hidden;
     text-overflow: ellipsis;
 }
+.deposit-panel__button{
+	box-shadow: rgba(0, 0, 0, 0.75) 0px -6px 10px -4px inset, 0px 2px 5px;
+	border-radius: 14px;
+	background-color: #fff;
+	font: 400 21px 'Stolzl Book';
+	color: #1f3262;
+}
+.slide-buttons{
+	margin: 0 auto;
+    width: max-content;
+    margin-top: 50px;
+}
+.slide-handle{
+	transition: .4s;
+	box-shadow: rgba(0, 0, 0, 0.75) 0px -6px 10px -4px inset, 0px 2px 5px ;
+	width: 70px;
+	border-radius: 10px;
+}

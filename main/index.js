@@ -29,6 +29,7 @@ const global = (function(){
 }())
 
 
+
 ;const commonContentHandler = (function(){
 	return function(that){
 		return{
@@ -41,29 +42,16 @@ const global = (function(){
 	}
 }());
 
-const dataRequest = (function(){
-		return {
-			request(url, callback){
-			 	fetch(url)
-				.then(response =>{
-					return response.json();
-				})
-				.then(json =>{
-					callback(json);
-				});	
-			},
-			getRequest(){
-				return jsonRes;
-			}
-		}
-}());
+
 
 (function(){
-	const D_setUserName = ({firstname, lastname} = json)=>{
+	const D_setUserName = ({ firstname, lastname } = json)=>{
 		elem.getEl('.first-name').textContent = firstname;
 		elem.getEl('.second-name').textContent = lastname;
 	}
 	dataRequest.request('db.json', D_setUserName);
+
+
 
 }());
 
@@ -119,8 +107,6 @@ const dataRequest = (function(){
 			dropdownHandler.drop();
 		}
 	});
-
-
 }());
 
 const dropdownHandler = (function(){
@@ -132,7 +118,7 @@ const dropdownHandler = (function(){
 		setTimeout(()=>{
 			aside.style.height = '80px';
 			
-		},450)
+		},450);
 	}
 	const drop = ()=>{
 		aside.style.height = '100%';
@@ -141,7 +127,6 @@ const dropdownHandler = (function(){
 	const toggle = ()=>{
 		if(asideContent.classList.contains('aside__content_dropdown')){
 			drop();
-			
 		}
 		else{
 			up();
@@ -155,3 +140,6 @@ const dropdownHandler = (function(){
 	}
 	
 }());
+
+if(!global.getIsMobile())
+commonContentHandler(elem.getEl('.menu__button')).nav();
