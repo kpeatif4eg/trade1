@@ -119,12 +119,12 @@ const dropdownHandler = (function(){
 		asideContent.className = 'aside__content aside__content_dropdown';
 		setTimeout(()=>{
 //убираем высоту aside 
-			aside.style.height = '80px';
+			aside.style.pointerEvents = 'none';
 			
 		},400);
 	}
 	const drop = ()=>{
-		aside.style.height = '100%';
+		aside.style.pointerEvents = 'auto';
 		asideContent.classList.remove('aside__content_dropdown');
 	}
 	const toggle = ()=>{
