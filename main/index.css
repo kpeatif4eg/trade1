@@ -117,7 +117,7 @@ body{
 		width: auto;
 	}
 	.horiz-translate{
-		transition: .1s;
+		transition: none;
 		transform: translateX(100%);
 	}
 }
