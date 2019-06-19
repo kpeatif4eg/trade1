@@ -15,5 +15,10 @@ li.selected{
 	width:110%;
 	background-color: red;
 }
+@media(max-width: 800px){
+	li.selected{
+		transition: none;
+	}
+}
 
 	

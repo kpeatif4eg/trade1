@@ -32,11 +32,13 @@ const global = (function(){
 
 ;const commonContentHandler = (function(){
 	return function(that){
+//в зависимости от того какое устройство (моб/ десктоп) меняем задержку перед переключением между рубриками меню
+		let delay = global.getIsMobile() ? 60 : 400;
 		return{
-			nav: render.content('modules/Content/Navigation/index.js', '.content', that),
-			trader: render.content('modules/Content/Trader/index.js', '.content', that),
-			history: render.content('modules/Content/History/index.js', '.content', that),
-			charge: render.content('modules/Content/Charge/index.js', '.content', that),
+			nav: render.content('modules/Content/Navigation/index.js', '.content', that, delay),
+			trader: render.content('modules/Content/Trader/index.js', '.content', that, delay),
+			history: render.content('modules/Content/History/index.js', '.content', that, delay),
+			charge: render.content('modules/Content/Charge/index.js', '.content', that, delay),
 			exit: function(){}
 		}
 	}
@@ -118,7 +120,7 @@ const dropdownHandler = (function(){
 		setTimeout(()=>{
 			aside.style.height = '80px';
 			
-		},450);
+		},500);
 	}
 	const drop = ()=>{
 		aside.style.height = '100%';

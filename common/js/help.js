@@ -49,12 +49,12 @@
 
 const render = (function(){
 	return {
-		content: function (srcPath, target, that){
+		content: function (srcPath, target, that, delay){
 			
 			return function(){
 //при клике смещаем наш блок с контейнером вправо за экран
-				elem.getEl(target).style.transition = '.4s';
-				elem.getEl(target).style.transform = 'translateX(100%)';
+				elem.addCl(elem.getEl(target), 'horiz-translate');
+		
 //делаем задержку 300мс что бы контейнет успел скрыться		
 				setTimeout(()=>{
 
@@ -86,15 +86,15 @@ const render = (function(){
 						elem.append(global.getTmpl(), target);
 //возвращаем его на место из за экрана
 						setTimeout(()=>{
-							elem.getEl(target).style.transform = 'translateX(0)';
+							elem.remCl(elem.getEl(target), 'horiz-translate');
 
-						}, 300)
+						}, delay)
 //по клику меню поднимаем шторку меню если включена мобильная версия
 						if(global.getIsMobile()){
 							dropdownHandler.up();
 						}
 					}
-			  	}, 300);
+			  	}, delay);
 			}
 
 		},	

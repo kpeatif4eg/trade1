@@ -62,22 +62,28 @@ body{
 	width: 50%;
 }
 .content{
+	transition: transform .5s cubic-bezier(0.04, 1.08, 0.96, 1.01);
 	width: 100%;
 	min-height: 80vh;
 	padding: 50px;
 	box-sizing: border-box;
+	will-change: transform;
 }
 .aside__content{
 	position: relative;
 	z-index: 3;
-	transition: .4s;
+	transition: transform .4s ease-in-out 0s;
 	padding-top: 25px;
 	background-image: linear-gradient(to left, #22386b 0%, #192249 100%);
 	height: 100%;
+	will-change: transform;
 }
 .aside__content_dropdown{
-	transition: .5s;
 	 transform: translateY(-100%); 
+}
+.horiz-translate{
+	transition: transform .4s cubic-bezier(0.16, 0.01, 0.35, 0.79);
+	transform: translateX(100%);
 }
 
 @media (max-width: 800px){
@@ -109,5 +115,9 @@ body{
 	}
 	.deposit-panel .overflow-container-deposit{
 		width: auto;
+	}
+	.horiz-translate{
+		transition: .1s;
+		transform: translateX(100%);
 	}
 }
