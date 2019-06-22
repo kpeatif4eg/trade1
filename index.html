@@ -13,7 +13,7 @@
 <body>
 	<aside class="aside">
 		<header class="header">
-			<object type="image/svg+xml" data='common/images/image.svg'></object>
+			<object id='logo' type="image/svg+xml" data='common/images/image.svg'></object>
 		</header>
 		<div class="aside__content">
 			<div class="user">
@@ -65,15 +65,16 @@
 
 	<main class="main-content">
 		<div class="positioned-header-bar">
-				<button class="burger" onClick='dropdownHandler.toggle()'>burger</button>
-				<div class="positioned-header-bar__wrapper">
-					<select class="languages">
-						<option>Pусский</option>
-						<option>English</option>
-						<option>Chinise</option>
-					</select>
-					<button class="exit header-exit">exit</button>
-				</div>	
+				<button class="burger" onClick='dropdownHandler.toggle(this)'>
+					<div class="burger__stick top"></div>
+					<div class="burger__stick mid"></div>
+					<div class="burger__stick low"></div>
+				</button>
+				<select class="languages">
+					<option>Pусский</option>
+					<option>English</option>
+					<option>Chinise</option>
+				</select>	
 			</div>
 
 			<article class="content"></article>

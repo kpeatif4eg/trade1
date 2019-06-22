@@ -5,7 +5,7 @@
 			return document.querySelector(elemId);
 		},
 		getElems: function(elemId){
-			return document.getElementsByClassName(elemId);
+			return Array.from(document.getElementsByClassName(elemId));
 		},
 		addCl: function(elem, className){
 			if (typeof elem === 'string') {
@@ -31,6 +31,7 @@
 			const el = document.createElement(tagName);
 			el.className = className;
 			target.appendChild(el);
+			return el;
 		},
 		injectScript: function(src){
 			const scr = document.createElement('script');
@@ -54,7 +55,7 @@ const render = (function(){
 			return function(){
 //при клике смещаем наш блок с контейнером вправо за экран
 				elem.addCl(elem.getEl(target), 'horiz-translate');
-				
+
 				const delayForMobile = global.getIsMobile() ? 350 : 0;
 //делаем задержку 'delay' что бы контейнет успел скрыться		
 				setTimeout(()=>{
@@ -108,6 +109,22 @@ const render = (function(){
 			link.setAttribute('type','text/css');
 			link.setAttribute('href', `${srcPath}/index.css`)
 			head.appendChild(link);
+		},
+		movingElememts :function(elements, parent){
+	
+		const {burger,lang} = elements;
+
+
+			if (parent.contains(lang)
+				|| parent.contains(burger)) return;
+
+			const cloneLangItem = lang.cloneNode(true),
+				  cloneBurgerButton = burger.cloneNode(true);
+
+			Object.values(elements).forEach(item =>{
+				parent.appendChild(item);
+
+			})		
 		}
 	}
 
@@ -124,10 +141,42 @@ const dataRequest = (function(){
 				.then(json =>{
 					callback(json);
 				});	
-			},
-			getRequest(){
-				return jsonRes;
 			}
 		}
 }());
 
+const elemArr = (function(a){
+	return {
+		applyStyle: function(arr, selector){
+			arr.forEach(item=>{
+				elem.addCl(item, selector);
+			})
+		},
+		removeStyle: function(arr, selector){
+			arr.forEach(item=>{
+				elem.remCl(item, selector);
+			})
+		},
+		addEvent: function(arr,typeEvent, callback){
+			arr.forEach(item=>{
+				item.addEventListener(typeEvent, callback);
+			})
+		}	
+	}
+}());
+
+const beautyShow = (function(){
+	return{
+		showScale: function(elemForShow){
+				elemForShow.style= 'opacity: 0; transform: translateX(-200%)';
+				setTimeout(()=>{
+				elem.remCl(elemForShow, 'hidden');
+			})
+
+			setTimeout(()=>{
+				elemForShow.style = 'opacity: 1; transform: translateY(0)';
+			},100)
+
+		}
+	}
+}())

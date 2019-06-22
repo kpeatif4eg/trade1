@@ -1,0 +1,40 @@
+.history-block {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: transparent;
+    justify-content: center;
+    width: 100%;
+
+}
+.history-block__row--title {
+    font-size: 15px;
+    color: #fff;
+    background-image: linear-gradient(to top, #354e88 0%, #192249 100%);
+}
+.history-block__table{
+    width: 100%;
+}
+.history-block__table-column-name {
+  padding-top: 26px;
+  padding-bottom: 26px;
+  font-family: 400;
+  text-align: center
+}
+
+.history-block__table-column-name:first-child {
+  border-radius: 5px 0px 0px 5px
+}
+
+.history-block__table-column-name:last-child {
+  border-radius: 0px 5px 5px 0px
+}
+.hist{
+    text-align: center;
+}
+td.history-block__table-cell{
+    border-right: 1px solid #000000;
+}
+.history-block__table-cell:last-child{
+    border:0;
+}

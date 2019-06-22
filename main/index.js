@@ -6,7 +6,7 @@ const global = (function(){
 	let thisInnerWidth;
 
 	return{
-		setTmpl(str){
+		setTmpl(str, callback){
 			thisTmpl = str;
 		},
 		getTmpl(){
@@ -14,6 +14,7 @@ const global = (function(){
 		},
 		setJson(json){
 			thisJson = json;
+			alert('sd')
 		},
 		getJson(){
 			return thisJson;
@@ -61,22 +62,7 @@ const global = (function(){
 
 
 (function(){
-	const movingElememts = (elements, parent)=> {
-	
-		const {burger,lang} = elements;
-		setTimeout(()=>{
 
-			if (parent.contains(lang)
-				|| parent.contains(burger)) return;
-
-			const cloneLangItem = lang.cloneNode(true),
-				  cloneBurgerButton = burger.cloneNode(true);
-
-			Object.values(elements).forEach(item =>{
-				parent.appendChild(item);
-			},1000)
-		})		
-	}
 	//в зависимости от ширины въюпорта 
 	//переносим кнопки и меняем стили
 
@@ -84,12 +70,12 @@ const global = (function(){
 		   burger =  elem.getEl('.burger');
 	let parent = elem.getEl('.header');
 	if(window.innerWidth < 800){
-		movingElememts({burger, lang}, parent);
+		render.movingElememts({burger, lang}, parent);
 		global.setIsMobile(true);
 	}
 	else{
 		parent = elem.getEl('.positioned-header-bar');
-		movingElememts({burger, lang}, parent);
+		render.movingElememts({burger, lang}, parent);
 		global.setIsMobile(false);
 	}
 
@@ -98,13 +84,13 @@ const global = (function(){
 		if(window.innerWidth < 800){
 			parent = elem.getEl('.header');
 			global.setIsMobile(true);
-			movingElememts({burger, lang}, parent);
+			render.movingElememts({burger, lang}, parent);
 		}
 		else{
 
 			parent = elem.getEl('.positioned-header-bar');
 			global.setIsMobile(false);
-			movingElememts({burger, lang}, parent);
+			render.movingElememts({burger, lang}, parent);
 			//разворачиваем aside  на всю высоту и убираем шторку у aside__content
 			dropdownHandler.drop();
 		}
@@ -115,20 +101,20 @@ const dropdownHandler = (function(){
 	const aside = elem.getEl('.aside'),
 			asideContent = elem.getEl('.aside__content');
 
-	const up = ()=>{
+	const up = (that)=>{
 		asideContent.className = 'aside__content aside__content_dropdown';
 		aside.style.pointerEvents = 'none';	
 	}
-	const drop = ()=>{
+	const drop = (that)=>{
 		aside.style.pointerEvents = 'auto';
 		asideContent.classList.remove('aside__content_dropdown');
 	}
-	const toggle = ()=>{
+	const toggle = (that)=>{
 		if(asideContent.classList.contains('aside__content_dropdown')){
-			drop();
+			drop(that);
 		}
 		else{
-			up();
+			up(that);
 		}
 	}
 

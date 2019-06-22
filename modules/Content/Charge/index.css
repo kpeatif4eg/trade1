@@ -107,3 +107,7 @@ button.wallet__button.button {}
 	width: 70px;
 	border-radius: 10px;
 }
+.deposit-item{
+	transition:transform .4s ease-in-out;
+	margin-top: 40px;
+}

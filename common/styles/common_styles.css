@@ -9,6 +9,17 @@ button, select{
 	border-radius: 26px;
 	background-color: #FFFFFF;
 }
+.menu__button{
+	color: #ffffff;
+	font-family: 'Stolzl';
+	font-size: 12px;
+	border: 0;
+	background-color: transparent;
+	padding-left: 39px;
+	white-space: nowrap;
+	width:100%;
+	text-align: left;
+}
 
 .hidden{
 	display: none !important;
@@ -17,6 +28,9 @@ li.selected{
 	transition: .3s;
 	width:110%;
 	background-color: red;
+}
+.slider-button{
+	box-shadow: rgba(0, 0, 0, 0.55) 0px -4.1px 10px -4px inset, black 0px 0px 2.2px -0.6px !important;
 }
 @media(max-width: 800px){
 	li.selected{
