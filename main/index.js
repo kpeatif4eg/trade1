@@ -66,16 +66,15 @@ const global = (function(){
 	//в зависимости от ширины въюпорта 
 	//переносим кнопки и меняем стили
 
-	const lang = elem.getEl('.languages'),
-		   burger =  elem.getEl('.burger');
+	const burger =  elem.getEl('.burger');
 	let parent = elem.getEl('.header');
 	if(window.innerWidth < 800){
-		render.movingElememts({burger, lang}, parent);
+		render.movingElememts({burger}, parent);
 		global.setIsMobile(true);
 	}
 	else{
 		parent = elem.getEl('.positioned-header-bar');
-		render.movingElememts({burger, lang}, parent);
+		render.movingElememts({burger}, parent);
 		global.setIsMobile(false);
 	}
 
@@ -84,13 +83,13 @@ const global = (function(){
 		if(window.innerWidth < 800){
 			parent = elem.getEl('.header');
 			global.setIsMobile(true);
-			render.movingElememts({burger, lang}, parent);
+			render.movingElememts({burger}, parent);
 		}
 		else{
 
 			parent = elem.getEl('.positioned-header-bar');
 			global.setIsMobile(false);
-			render.movingElememts({burger, lang}, parent);
+			render.movingElememts({burger}, parent);
 			//разворачиваем aside  на всю высоту и убираем шторку у aside__content
 			dropdownHandler.drop();
 		}

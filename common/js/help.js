@@ -112,14 +112,12 @@ const render = (function(){
 		},
 		movingElememts :function(elements, parent){
 	
-		const {burger,lang} = elements;
+		const {burger} = elements;
 
 
-			if (parent.contains(lang)
-				|| parent.contains(burger)) return;
+			if (parent.contains(burger)) return;
 
-			const cloneLangItem = lang.cloneNode(true),
-				  cloneBurgerButton = burger.cloneNode(true);
+			const cloneBurgerButton = burger.cloneNode(true);
 
 			Object.values(elements).forEach(item =>{
 				parent.appendChild(item);
