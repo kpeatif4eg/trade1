@@ -104,32 +104,9 @@
 	flex-direction: column;
 	justify-content: space-between;
 }
-/*.burger-anim {
-	
-	animation: burger-rotate .4s forwards;
+.low{
+	font-size: .5rem;
 }
-.sticks-anim{
-	animation: sticks-rotate .4s forwards;	
-}
-@keyframes burger-rotate{
-	from{
-		transform: rotate(0deg);
-
-	}
-	to{
-		transform: rotate(170deg);
-	}
-}
-@keyframes sticks-rotate{
-	from{
-		transform: rotate(0deg);
-
-	}
-	to{
-		transform: rotate(90deg);
-	}
-}*/
-
 
 @media (max-width: 800px){
 	.aside{

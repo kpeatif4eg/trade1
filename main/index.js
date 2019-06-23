@@ -2,7 +2,7 @@
 const global = (function(){
 	//in tpml keep 
 	let thisTmpl;
-	let thisJson;
+	let thisJsonCurrency;
 	let thisInnerWidth;
 
 	return{
@@ -13,11 +13,10 @@ const global = (function(){
 			return thisTmpl;
 		},
 		setJson(json){
-			thisJson = json;
-			alert('sd')
+			thisJsonCurrency = json;
 		},
 		getJson(){
-			return thisJson;
+			return thisJsonCurrency;
 		},
 		setIsMobile(boolWidth){
 			thisInnerWidth = boolWidth;
@@ -54,7 +53,12 @@ const global = (function(){
 	}
 	dataRequest.request('db.json', D_setUserName);
 
+	const getEquivDollar = json =>{
+		global.setJson(json.USD.last);
+		writeAsideExchange.applyValue(global.getJson());
 
+	}
+	dataRequest.request('https://blockchain.info/ticker', getEquivDollar)
 
 }());
 
@@ -127,3 +131,11 @@ const dropdownHandler = (function(){
 
 if(!global.getIsMobile())
 commonContentHandler(elem.getEl('.menu__button')).nav();
+
+const writeAsideExchange = (function(){
+	return{
+		applyValue: function(value){
+			elem.getEl('.exch-value').textContent = value;
+		}
+	}
+}())

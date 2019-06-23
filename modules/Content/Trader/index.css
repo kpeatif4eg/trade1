@@ -1,0 +1,261 @@
+
+
+.trader-card{
+	padding: 22px;
+	background-color: #fff;
+	box-shadow: 0px 0px 20px -5px #424dab;
+	border-radius: 10px;
+	font-family: "Stolzl";
+	margin-bottom: 50px;
+}
+.trader-card__top-side{
+	font-family: 'Stolzl Book';
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 40px;
+}
+.trader-info{
+	display: flex;
+	align-items: flex-start;
+	width: 50%;
+	justify-content: space-between;
+	font-size: 1.3rem;
+	color: #071943;
+}
+.profit__days{
+	font-size: 0.8rem;
+	transition: .3s;
+}
+.trader-info__descript{
+	color: #a8b5d6;
+	font-size: 13px;
+}
+.trader-data{
+	display: flex;
+	align-items: flex-start;
+}
+.trader-data__avatar{
+	width: 60px;
+	height: 60px;
+	position: relative;
+	top: -20px;
+	border-radius: 50%;
+	margin-right: 20px;
+}
+.trader-info__item{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.trader-card__bot-side{
+	justify-content: space-between;
+	display: flex;
+}
+.subscr-end, .unsubcsribe-button{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	border-radius: 30px;
+	color: rgb(168, 181, 214);
+	border: 1px solid;
+	font-size: 0.9rem;
+	width: 46%;
+	height: 40px;
+}
+.subscr-end__description{
+	overflow: hidden;
+    text-overflow: ellipsis;
+}
+.trader-data__full-name{
+	margin-right: 10px;
+}
+.unsubcsribe-button{
+	color: #ffffff;
+	background-image: linear-gradient(to bottom, rgba(25, 35, 74, 0.86) 0%, rgba(32, 49, 95, 0.86) 45%, rgba(41, 65, 120, 0.86) 99%, rgba(41, 65, 120, 0.86) 100%);
+}
+.tmpl_container {
+  margin: 0 auto;
+  font-family: Stolzl;
+  flex-wrap: wrap;
+  position: relative;
+  width: 82%;
+  display: flex;
+  /* top: -1px; */
+}
+
+.tmpl_balance {
+  margin-bottom: 2%;
+  background-image: linear-gradient(to top, rgba(48, 61, 162, 0.86) 0%, rgba(36, 42, 133, 0.86) 45%, rgba(21, 19, 98, 0.86) 99%, rgba(21, 19, 97, 0.86) 100%);
+  border-radius: 18px;
+  color: #fff;
+  flex-wrap: wrap;
+  display: flex;
+  padding: 10px;
+  margin-top: 12px;
+  font: 16px Stolzl;
+  width: 100%;
+  height: 76px;
+  background-color: #add8e6;
+}
+
+.tmpl_title {
+  text-align: center;
+  width: 100%
+}
+
+.tmpl_item {
+  font-size: 14px;
+}
+
+.tmpl_balance-container-top {
+  width: 100%;
+  font-weight: 900;
+  text-align: center
+}
+
+.tmpl_balance-container-bot {
+  width: 100%;
+  text-align: center
+}
+
+.tmpl_stoploss {
+  align-items: center;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  /* padding: 0 20px; */
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  width: 18%;
+  border-radius: 4px;
+}
+
+.tmpl_stoploss-value {
+  align-self: center;
+  color: #071943;
+  font: 20px Stolzl;
+}
+
+.tmpl_result_copytrading {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  margin-left: 2%;
+}
+
+.tmpl_result_copytrading-left {
+  width: 70%;
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: #fff;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px
+}
+
+.tmpl_result_copytrading-right {
+  height: inherit;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 30%;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  /* background-color: #31aa1d */
+}
+
+.tmpl_result_copytrading-right-descr {
+
+}
+
+.tmpl_doll-value {
+  font-size: 15px;
+}
+
+.tmpl_btc-value {
+  font-size: 16px;
+}
+
+.tmpl_result_copytrading-right-value {
+  font-size: 15px;
+}
+
+.tmpl_result_copytrading-container {
+  color: #071943;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+@media (max-width: 800px){
+	.trader-card__top-side{
+		flex-direction: column;
+		align-items: center;
+	}
+	.trader-data{
+		flex-direction: column;
+	}
+	.trader-data__avatar{
+		top: 0;
+		margin: 0 auto;
+	}
+	.trader-card{
+		max-width: 70%;
+		margin: 0 auto;
+	}
+	.trader-card__top-side{
+		margin-top: 0;
+	}
+	.trader-data__full-name{
+	    margin-bottom: 12px;
+	    font-size: 1.1rem;
+	    line-height: 28px;
+	}
+	.trader-info{
+		font-size: .9rem;
+		max-width: 280px;
+		width: 100%;
+		margin: 0 auto;
+	}
+	.trader-info__item{
+		min-width: 50px;
+	}
+	.tmpl_stoploss-value {
+
+  		font: 0.8rem Stolzl;
+	}
+}
+
+@media (max-width: 600px){
+	.trader-card{
+		font-size: .75rem;
+	}
+	.subscr-end{
+		flex-direction: column;
+		text-align: center;
+		padding-left: 6px;
+		padding-right: 6px;
+		font-size: .75rem;
+	}
+}
+@media (max-width: 500px){
+
+	.profit__days{
+		position: absolute;
+		font-size: .5rem;
+		top: 6px;
+		left: 43px;
+	}
+	.tmpl_container {
+	    width: 94%;
+	}
+	.tmpl_result_copytrading-descr{
+		text-align: center;
+	}
+}

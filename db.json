@@ -18,7 +18,7 @@
             "email":"sa@sa.sa",
             "country":"ANTHONY BAKER",
             "birthDate":"1998-11-22",
-            "registrationDate":"2019-03-17",
+            "registrationDate":"2019-01-17",
             "traderWallet":{
                "id":3,
                "address":"18hXzcH7wNqvwqY3tShfXbTYaWguu7FFhH"
@@ -44,8 +44,8 @@
          "stopLoss":"15",
          "days":"21",
          "coins":"1347500",
-         "profit":"0.0",
-         "endDate":"2019-06-25",
+         "profit":10,
+         "endDate":"2019-12-01",
          "type":"TradeOne"
       },
       {
@@ -58,7 +58,7 @@
             "email":"sa@sa.sa",
             "country":"DANIEL MORGAN",
             "birthDate":"1998-11-22",
-            "registrationDate":"2019-03-17",
+            "registrationDate":"2019-01-17",
             "traderWallet":{
                "id":5,
                "address":"18hXzcH7wNqvwqY3tShfXbTYaWguu7FFhH"

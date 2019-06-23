@@ -29,7 +29,6 @@
 	const response = dataRequest.request('db.json', historyHandler);
 
 	function historyHandler(json){
-		console.log(json)
 		json.history.forEach(item =>{
 			const {
 				firstName,
