@@ -3,12 +3,21 @@
 
     <div class="deposit-panel">
 
-      <div class="deposit-buttons">
-        <button class="button deposit-panel__button button__fill" value='0'>Filling</button>
-        <button class="button deposit-panel__button button__withdraw" value='1'>Withdaw</button>
-        <button class="button deposit-panel__button button__api" value='2'>API</button>
-        <button class="button deposit-panel__button button__buy-bitt">Buy Bitt</button>
-      </div>
+      <ul class="deposit-buttons">
+          <li class="deposit-buttons__item">
+            <button class="button deposit-panel__button button__fill" value='0'>Filling</button>
+          </li>
+          <li class="deposit-buttons__item active-button">
+            <button class="button deposit-panel__button button__withdraw" value='1'>Withdaw</button>
+          </li>
+          <li class="deposit-buttons__item">
+            <button class="button deposit-panel__button button__api" value='2'>API</button>
+          </li>
+          <li class="deposit-buttons__item">
+            <button class="button deposit-panel__button button__buy-bitt">Buy Bitt</button>
+          </li>
+
+      </ul>
 
       <div class="filing deposit-item" value='0'>
         <div class="slide-buttons">
@@ -132,7 +141,7 @@
   //передаем путь к .css файлу
   render.styles('modules/Content/Charge');
   
-    global.setTmpl(template);
+    global.setTmpl(template, actionTemplate);
 
 
   //запрос
@@ -156,16 +165,15 @@
 
     elem.addCl(this, 'slider-button')
   };
-  //
+  //обработчик кнопок навигации пополнения
     function depositButtonPanelHandler(){
       const action = helper(this.value);  
 
       function helper(value){
         elem.getElems('deposit-item').forEach(item =>{
           elem.addCl(item, 'hidden');
-          // debugger
           if(item.getAttribute('value') === value) {
-            beautyShow.showScale(item);
+            beautyShow.showSwipe(item, -100,0);
             return
           }
           
@@ -176,8 +184,8 @@
 
 
 
-  //таймаут для загрузки dom 
-  setTimeout(function(){
+  //оживаляем слайдер
+function actionTemplate(){
     const sliderContainer = elem.getEl('.overflow-wraper-deposit');
     const handleButtons = elem.getElems('slide-handle');
     const depositButtons = elem.getElems('deposit-panel__button');
@@ -193,10 +201,11 @@
     });
      //инициализация нажатой кнопки слайдера
     handleButtons[0].click();
-
+                  beautyShow.showDrop(
+                    elem.getEl('.deposit-buttons'), -360 ,0, 900);
     elemArr.addEvent(depositButtons,'click', depositButtonPanelHandler);
 
-  });
+}
 
 
 

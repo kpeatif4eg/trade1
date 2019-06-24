@@ -4,12 +4,18 @@ const global = (function(){
 	let thisTmpl;
 	let thisJsonCurrency;
 	let thisInnerWidth;
+	let thisCallback;
 
 	return{
 		setTmpl(str, callback){
 			thisTmpl = str;
+			thisCallback = callback;
 		},
 		getTmpl(){
+			setTimeout(()=>{
+				try{thisCallback();}
+				catch(e){};
+			},10)
 			return thisTmpl;
 		},
 		setJson(json){

@@ -86,8 +86,9 @@ const render = (function(){
 					response.onload = function(){
 //добавляем на темплейт в блок
 						elem.append(global.getTmpl(), target);
-//возвращаем его на место из за экрана и добавляем к задержке 300мс для последовательности анимаций
+//возвращаем его на место из за экрана и добавляем к задержке 'delayForMobile' для последовательности анимаций
 						setTimeout(()=>{
+
 							elem.remCl(elem.getEl(target), 'horiz-translate');
 
 						}, delay + delayForMobile)
@@ -165,16 +166,25 @@ const elemArr = (function(a){
 
 const beautyShow = (function(){
 	return{
-		showScale: function(elemForShow){
-				elemForShow.style= 'opacity: 0; transform: translateX(-200%)';
+		showSwipe: function(elemForShow, start, finish, delay = 100){
+				elemForShow.style= `opacity: 0; transform: translateX(${start}%)`;
 				setTimeout(()=>{
 				elem.remCl(elemForShow, 'hidden');
 			})
 
 			setTimeout(()=>{
-				elemForShow.style = 'opacity: 1; transform: translateY(0)';
-			},100)
+				elemForShow.style = `opacity: 1; transition: .4s; transform: translateX(${finish}%)`;
+			},delay)
+		},
+		showDrop: function(elemForShow, start, finish, delay = 100){
+				elemForShow.style= `opacity: 0; transform: translateY(${start}%)`;
+				setTimeout(()=>{
+				elem.remCl(elemForShow, 'hidden');
+			})
 
+			setTimeout(()=>{
+				elemForShow.style = `opacity: 1; transition: transform .2s; transform: translateY(${finish}%)`;
+			},delay)
 		}
 	}
 }())

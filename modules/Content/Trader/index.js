@@ -1,8 +1,9 @@
 (function(){
 	const template = `
-		<div class="traders">
+		<div class="subscribe-traders">
 			
 		</div>
+
 
 	`;
 
@@ -13,7 +14,6 @@
 		
 
 		subscriptions.forEach(item=>{
-												console.log(item)
 		const { trader,
 				profit: subsrcProfit,
 				endDate,
@@ -114,7 +114,7 @@
 			</div>
 	`;
 	console.log(coins,DECIMAL);
-	elem.inject('div', 'followerTrader', '.traders').innerHTML = responseTemplate;
+	elem.inject('div', 'followerTrader', '.subscribe-traders').innerHTML = responseTemplate;
 		})
 		
 	}

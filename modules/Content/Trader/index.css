@@ -207,7 +207,7 @@
 	}
 	.trader-card{
 		max-width: 70%;
-		margin: 0 auto;
+		margin: 0 auto 40px;
 	}
 	.trader-card__top-side{
 		margin-top: 0;
