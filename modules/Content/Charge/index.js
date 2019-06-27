@@ -19,7 +19,7 @@
 
       </ul>
 
-      <div class="filing deposit-item" value='0'>
+      <div class="filing deposit-item" data-id='0'>
         <div class="slide-buttons">
           <button class="button slide-handle">BTC</button>
           <button class=" button slide-handle">BITT</button>
@@ -76,11 +76,11 @@
             </div>
           </div>
 
-          <div class="withdraw deposit-item hidden" value='1'>
+          <div class="withdraw deposit-item hidden" data-id='1'>
               <div class="withdraw__balance">
                 <h2 class="balance__title withdraw-title">Баланс не в управлении </h2>
-                <div class="balance__item">BTC</div>
-                <div class="balance__value">0.0</div>
+                <span class="exchange-item">BTC</span>
+                <span class="balance__value">0.0</span>
               </div>
 
               <div class="withdraw__sum-block">
@@ -89,16 +89,16 @@
                   <span class="withdraw-value">0</span>
                   <span class="withdraw-currency">Bitcoin</span>
                 </div>
-                <input type="range" name="">
+                <input class='withdraw__range' type="range" name="">
               </div>
               <div class="withdraw__address">
-                <h2 class="address__title">BTC Адрес вывода средств</h2>
+                <h2 class="address__title withdraw-title">BTC Адрес вывода средств</h2>
                 <input class="address__input">
-                <button class="address__submit">Вывести</button>
+                <button class="button address__submit">Вывести</button>
               </div>
           </div>
 
-          <div class="api deposit-item hidden" value='2'>
+          <div class="api deposit-item hidden" data-id='2'>
             <div class="api_section">
         <div class="api_section__head">
           <span class="head__title">BINANCE</span>
@@ -172,7 +172,7 @@
       function helper(value){
         elem.getElems('deposit-item').forEach(item =>{
           elem.addCl(item, 'hidden');
-          if(item.getAttribute('value') === value) {
+          if(item.dataset.id === value) {
             beautyShow.showSwipe(item, -100,0);
             return
           }
