@@ -89,7 +89,7 @@
                   <span class="withdraw-value">0</span>
                   <span class="withdraw-currency">Bitcoin</span>
                 </div>
-                <input class='withdraw__range' type="range" name="">
+                <input class='withdraw__range' type="range" min='0'step='1' max='90' name="">
               </div>
               <div class="withdraw__address">
                 <h2 class="address__title withdraw-title">BTC Адрес вывода средств</h2>
@@ -140,12 +140,11 @@
 
   //передаем путь к .css файлу
   render.styles('modules/Content/Charge');
-  
+    
     global.setTmpl(template, actionTemplate);
 
 
   //запрос
-
   const D_setWalletBalanceBTC = ({ balance } = json)=>{
     elem.getEl('#btc-balance').textContent = balance;
   }
@@ -156,18 +155,24 @@
   }
   dataRequest.request('db.json', D_setWalletBalanceBITT);
 
+
   //слайдер раздела пополнения
   function walletsSliderHandler(element, direction){
     const position = direction === "+" ? -50 : 0;
     element.style.transform = `translateX(${position}%)`;
- 
+
     elemArr.removeStyle(elem.getElems(this.classList[1]), 'slider-button');
 
     elem.addCl(this, 'slider-button')
   };
-  //обработчик кнопок навигации пополнения
+
+
+  //обработчик кнопок навигации модуля
     function depositButtonPanelHandler(){
+      const addingClass = 'deposit-panel-buttons_active';
+      elemArr.removeStyle(elem.getElems('deposit-panel__button'), addingClass);
       const action = helper(this.value);  
+      elem.addCl(this, addingClass);
 
       function helper(value){
         elem.getElems('deposit-item').forEach(item =>{
@@ -176,20 +181,32 @@
             beautyShow.showSwipe(item, -100,0);
             return
           }
-          
         });
-
       }
     }
+function rangeHandler(e){
 
+  let targ;
+  if(e.__proto__.constructor.name === 'MouseEvent'){
+    targ = e.target.className === 'withdraw__range'
+              ? e.target
+              :null;
+  }
+  else{
+    targ = e;
+  }
+  
+  const elementForChange = elem.getEl('.withdraw.deposit-item');
 
-
-  //оживаляем слайдер
+  elementForChange.style.backgroundColor = `rgb(0, ${(targ.value / targ.max * 100 + 50).toFixed(0)} ,0)`
+}
+  
+//весим обработчики событий
 function actionTemplate(){
     const sliderContainer = elem.getEl('.overflow-wraper-deposit');
     const handleButtons = elem.getElems('slide-handle');
     const depositButtons = elem.getElems('deposit-panel__button');
-
+    const range = elem.getEl('.withdraw__range');
      handleButtons.forEach((item, index)=>{
       let direction = index > 0 ? '+' : '-';
       item.addEventListener(
@@ -200,10 +217,19 @@ function actionTemplate(){
       );
     });
      //инициализация нажатой кнопки слайдера
+     console.log(depositButtons)
     handleButtons[0].click();
-                  beautyShow.showDrop(
-                    elem.getEl('.deposit-buttons'), -360 ,0, 900);
+
+    elem.addCl(depositButtons[0], 'deposit-panel-buttons_active');
+
+    beautyShow.showDrop(elem.getEl('.deposit-buttons'), -360 ,0, 900);
+
     elemArr.addEvent(depositButtons,'click', depositButtonPanelHandler);
+
+    range.addEventListener('change', rangeHandler);
+    range.addEventListener('mousemove', rangeHandler);
+
+    rangeHandler(range);
 
 }
 

@@ -144,7 +144,7 @@ const dataRequest = (function(){
 		}
 }());
 
-const elemArr = (function(a){
+const elemArr = (function(){
 	return {
 		applyStyle: function(arr, selector){
 			arr.forEach(item=>{
@@ -174,6 +174,10 @@ const beautyShow = (function(){
 
 			setTimeout(()=>{
 				elemForShow.style = `opacity: 1; transition: .4s; transform: translateX(${finish}%)`;
+
+				setTimeout(()=>{
+      				elemForShow.style = '';
+   				 });
 			},delay)
 		},
 		showDrop: function(elemForShow, start, finish, delay = 100){
