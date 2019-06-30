@@ -1,79 +1,87 @@
-
+.trader-type-change{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.trader-type-button{
+  /*box-shadow: 1px 1px 1px red;*/
+}
 
 .trader-card{
-	padding: 22px;
-	background-color: #fff;
-	box-shadow: 0px 0px 20px -5px #424dab;
-	border-radius: 10px;
-	font-family: "Stolzl";
-	margin-bottom: 50px;
+  padding: 22px;
+  background-color: #fff;
+  border-radius: 10px;
+  font-family: "Stolzl";
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .3),             -23px 0 20px -23px rgba(0, 0, 0, .6),             23px 0 20px -23px rgba(0, 0, 0, .6),             inset 0 0 40px rgba(0, 0, 0, .1);
+  margin-bottom: 50px;
 }
 .trader-card__top-side{
-	font-family: 'Stolzl Book';
-	width: 100%;
-	display: flex;
-	justify-content: space-between;
-	margin-top: 40px;
+  font-family: 'Stolzl Book';
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
 }
 .trader-info{
-	display: flex;
-	align-items: flex-start;
-	width: 50%;
-	justify-content: space-between;
-	font-size: 1.3rem;
-	color: #071943;
+  display: flex;
+  align-items: flex-start;
+  width: 50%;
+  justify-content: space-between;
+  font-size: 1.3rem;
+  color: #071943;
 }
 .profit__days{
-	font-size: 0.8rem;
-	transition: .3s;
+  font-size: 0.8rem;
+  transition: .3s;
 }
 .trader-info__descript{
-	color: #a8b5d6;
-	font-size: 13px;
+  color: #a8b5d6;
+  font-size: 13px;
 }
 .trader-data{
-	display: flex;
-	align-items: flex-start;
+  display: flex;
+  align-items: flex-start;
 }
 .trader-data__avatar{
-	width: 60px;
-	height: 60px;
-	position: relative;
-	top: -20px;
-	border-radius: 50%;
-	margin-right: 20px;
+  width: 60px;
+  height: 60px;
+  position: relative;
+  top: -20px;
+  border-radius: 50%;
+  margin-right: 20px;
 }
 .trader-info__item{
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .trader-card__bot-side{
-	justify-content: space-between;
-	display: flex;
+  justify-content: space-between;
+  display: flex;
 }
 .subscr-end, .unsubcsribe-button{
-	display: flex;
-	align-items: center;
-	justify-content: space-around;
-	border-radius: 30px;
-	color: rgb(168, 181, 214);
-	border: 1px solid;
-	font-size: 0.9rem;
-	width: 46%;
-	height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 30px;
+  color: rgb(168, 181, 214);
+  border: 1px solid;
+  font-size: 0.9rem;
+  width: 46%;
+  height: 40px;
 }
 .subscr-end__description{
-	overflow: hidden;
+  overflow: hidden;
     text-overflow: ellipsis;
 }
 .trader-data__full-name{
-	margin-right: 10px;
+  margin-right: 10px;
 }
 .unsubcsribe-button{
-	color: #ffffff;
-	background-image: linear-gradient(to bottom, rgba(25, 35, 74, 0.86) 0%, rgba(32, 49, 95, 0.86) 45%, rgba(41, 65, 120, 0.86) 99%, rgba(41, 65, 120, 0.86) 100%);
+  color: #ffffff;
+  background-image: linear-gradient(to bottom, rgba(25, 35, 74, 0.86) 0%, rgba(32, 49, 95, 0.86) 45%, rgba(41, 65, 120, 0.86) 99%, rgba(41, 65, 120, 0.86) 100%);
 }
 .tmpl_container {
   margin: 0 auto;
@@ -194,68 +202,314 @@
 }
 
 @media (max-width: 800px){
-	.trader-card__top-side{
-		flex-direction: column;
-		align-items: center;
-	}
-	.trader-data{
-		flex-direction: column;
-	}
-	.trader-data__avatar{
-		top: 0;
-		margin: 0 auto;
-	}
-	.trader-card{
-		max-width: 70%;
-		margin: 0 auto 40px;
-	}
-	.trader-card__top-side{
-		margin-top: 0;
-	}
-	.trader-data__full-name{
-	    margin-bottom: 12px;
-	    font-size: 1.1rem;
-	    line-height: 28px;
-	}
-	.trader-info{
-		font-size: .9rem;
-		max-width: 280px;
-		width: 100%;
-		margin: 0 auto;
-	}
-	.trader-info__item{
-		min-width: 50px;
-	}
-	.tmpl_stoploss-value {
+  .trader-card__top-side{
+    flex-direction: column;
+    align-items: center;
+  }
+  .trader-data{
+    flex-direction: column;
+  }
+  .trader-data__avatar{
+    top: 0;
+    margin: 0 auto;
+  }
+  .trader-card{
+    max-width: 70%;
+    margin: 0 auto 40px;
+  }
+  .trader-card__top-side{
+    margin-top: 0;
+  }
+  .trader-data__full-name{
+      margin-bottom: 12px;
+      font-size: 1.1rem;
+      line-height: 28px;
+  }
+  .trader-info{
+    font-size: .9rem;
+    max-width: 280px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .trader-info__item{
+    min-width: 50px;
+  }
+  .tmpl_stoploss-value {
 
-  		font: 0.8rem Stolzl;
-	}
+      font: 0.8rem Stolzl;
+  }
 }
 
 @media (max-width: 600px){
-	.trader-card{
-		font-size: .75rem;
-	}
-	.subscr-end{
-		flex-direction: column;
-		text-align: center;
-		padding-left: 6px;
-		padding-right: 6px;
-		font-size: .75rem;
-	}
+  .trader-card{
+    font-size: .75rem;
+  }
+  .subscr-end{
+    flex-direction: column;
+    text-align: center;
+    padding-left: 6px;
+    padding-right: 6px;
+    font-size: .75rem;
+  }
 }
 @media (max-width: 500px){
 
-	.profit__days{
-		position: absolute;
-		font-size: .5rem;
-		top: 6px;
-		left: 43px;
-	}
-	.tmpl_container {
-	    width: 94%;
-	}
-	.tmpl_result_copytrading-descr{
-		text-align: center;
-	}
+  .profit__days{
+    position: absolute;
+    font-size: .5rem;
+    top: 6px;
+    left: 43px;
+  }
+  .tmpl_container {
+      width: 94%;
+  }
+  .tmpl_result_copytrading-descr{
+    text-align: center;
+  }
+}
+
+
+
+
+
+
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-wrap: wrap;
+  max-width: 13rem;
+  min-width: 11rem;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  background-color: #fff;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.card__avatar {
+  width: 50px;
+  height: 50px;
+  background-color: #90ee90;
+  border-radius: 50%;
+  font-family: 'Stolzl';
+  /* margin-top: 27px; */
+}
+
+.card__name {
+  font: 400 21px 'Stolzl';
+  color: #1f3262;
+  margin-top: 15px;
+}
+
+.card__more {
+  margin-top: 10px;
+  padding: 7px 35px;
+  font: 400 15px 'Stolzl Book';
+  'Stolzl Book';
+  background-color: #5d77f6;
+  color: #fff;
+  border-radius: 20px;
+  box-shadow: 0px -4px 13px -3px black;
+  border: 0;
+}
+
+.card__more:hover {
+  cursor: pointer
+}
+
+.card__more:active {
+  color: #fff;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#4c61f2), to(#7192fb));
+  background-image: -webkit-linear-gradient(top, #4c61f2 0%, #7192fb 100%);
+  background-image: -o-linear-gradient(top, #4c61f2 0%, #7192fb 100%);
+  background-image: linear-gradient(to bottom, #4c61f2 0%, #7192fb 100%)
+}
+
+.card__income {
+  width: 81%;
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.card__income-text,
+.card__rating-text,
+.card__followers-text {
+  font: 400 14px "Stolzl Book";
+  color: #1f3262;
+  opacity: 0.5
+}
+
+.card__income-rate {
+  font: 400 20px 'Stolzl';
+  color: #31aa1d;
+}
+
+.card__income-term {
+  font: 400 11px 'Stolzl';
+  color: #1f3262
+}
+.status__wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.card__status {
+  width: 81%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: column;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.card__rating-text,
+.card__followers-text {
+  text-transform: uppercase;
+  display: block;
+}
+
+.card__rating-number,
+.card__followers-number {
+  font: 400 22px 'Stolzl';
+  color: #1f3262;
+  display: block;
+}
+
+.card__followers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center
+}
+
+.card__available-wrapper {
+  /* margin-top: 25px; */
+  /* margin-bottom: 29px; */
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#354e88), to(#192249));
+  background-image: -webkit-linear-gradient(bottom, #354e88 0%, #192249 100%);
+  background-image: -o-linear-gradient(bottom, #354e88 0%, #192249 100%);
+  background-image: linear-gradient(to top, #354e88 0%, #192249 100%);
+  border-radius: 20px;
+}
+
+.card__available {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: "Stolzl Book";
+  color: #fff
+}
+
+.card__available--top,
+.card__available--bottom {
+  margin-top: 20px
+}
+.card__available--bottom {
+  margin-bottom: 17px
+}
+
+.card__bar-wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center
+}
+
+.card__bar {
+  display: block;
+  width: 80%;
+  height: 8px;
+  margin-top: 11px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  position: relative
+}
+
+.card__bar-progress {
+  display: block;
+  width: 40%;
+  height: 8px;
+  background-color: #5d77f6;
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
+  left: 0
+}
+.subscribe-traders {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.normalTrader{
+  margin: 0 20px;
 }

@@ -191,4 +191,9 @@ const beautyShow = (function(){
 			},delay)
 		}
 	}
+}());
+
+
+(function(){
+
 }())

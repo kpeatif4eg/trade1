@@ -1,34 +1,48 @@
 
 const global = (function(){
 	//in tpml keep 
-	let thisTmpl;
-	let thisJsonCurrency;
-	let thisInnerWidth;
-	let thisCallback;
+	let Tmpl,
+		JsonCurrency,
+		InnerWidth,
+		Callback,
+		cachedNormalTraders,
+		cachedWorkingTraders;
 
 	return{
 		setTmpl(str, callback){
-			thisTmpl = str;
-			thisCallback = callback;
+			Tmpl = str;
+			Callback = callback;
 		},
 		getTmpl(){
 			setTimeout(()=>{
-				try{thisCallback();}
+				try{Callback();}
 				catch(e){};
 			},10)
-			return thisTmpl;
+			return Tmpl;
 		},
 		setJson(json){
-			thisJsonCurrency = json;
+			JsonCurrency = json;
 		},
 		getJson(){
-			return thisJsonCurrency;
+			return JsonCurrency;
 		},
 		setIsMobile(boolWidth){
-			thisInnerWidth = boolWidth;
+			InnerWidth = boolWidth;
 		},
 		getIsMobile(){
-			return thisInnerWidth;
+			return InnerWidth;
+		},
+		setNormalTraders(json){
+			cachedNormalTraders = json;
+		},
+		getNormalTraders(){
+			return cachedNormalTraders;
+		},
+		setWorkingTraders(json){
+			cachedSubscribedTraders = json;
+		},
+		getWorkingTraders(){
+			return cachedSubscribedTraders
 		},
 	}
 

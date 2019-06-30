@@ -20,6 +20,15 @@ button, select{
 	width:100%;
 	text-align: left;
 }
+.slide-handle{
+	transition: .4s;
+	box-shadow: rgba(0, 0, 0, 0.75) 0px -6px 10px -4px inset, 0px 2px 5px ;
+	width: 70px;
+	border-radius: 10px;
+}
+.slider-button {
+    box-shadow: rgba(0, 0, 0, 0.55) 0px -4.1px 10px -4px inset, black 0px 0px 2.2px -0.6px !important;
+}
 
 .hidden{
 	display: none !important;
@@ -29,9 +38,7 @@ li.selected{
 	width:110%;
 	background-color: red;
 }
-.slider-button{
-	box-shadow: rgba(0, 0, 0, 0.55) 0px -4.1px 10px -4px inset, black 0px 0px 2.2px -0.6px !important;
-}
+
 @media(max-width: 800px){
 	li.selected{
 		transition: none;
