@@ -1,96 +1,96 @@
 
 .wallet{
-	display: inline-block;
-	width: 49.75%;
-	background-color: white;
-	margin-top: 30px;
-	margin-bottom: 10px;
-	border-radius: 20px;
+  display: inline-block;
+  width: 49.75%;
+  background-color: white;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  border-radius: 20px;
 }
 .wallet__display:first-child{
-	margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 .wallet__button, .qr__button{
-	float: right;
-	background-image: linear-gradient(to bottom, #4c61f2 0%, #7192fb 100%);
-	box-shadow: 1px 5px 9px -2px black;
-	min-width: 70px;
-	color: #fff;
-	font-weight: 700;
+  float: right;
+  background-image: linear-gradient(to bottom, #4c61f2 0%, #7192fb 100%);
+  box-shadow: 1px 5px 9px -2px black;
+  min-width: 70px;
+  color: #fff;
+  font-weight: 700;
 }
 .deposit-buttons__item{
-	display: inline-block;
+  display: inline-block;
 }
 
 .deposit-panel__button{
-	box-shadow: rgba(0, 0, 0, 0.75) 0px -6px 10px -4px inset, 0px 2px 5px;
-	border-radius:0;
-	transition: .2s;
-	background-color: #fff;
-	font: 400 21px 'Stolzl Book';
-	color: #1f3262;
-	margin-top: 7px;
+  box-shadow: rgba(0, 0, 0, 0.75) 0px -6px 10px -4px inset, 0px 2px 5px;
+  border-radius:0;
+  transition: .2s;
+  background-color: #fff;
+  font: 400 21px 'Stolzl Book';
+  color: #1f3262;
+  margin-top: 7px;
 }
 .deposit-panel__button:active{
-	box-shadow: rgba(0, 0, 0, 0.75) 0px 1px 8px -6px inset, 0px 2px 5px;
+  box-shadow: rgba(0, 0, 0, 0.75) 0px 1px 8px -6px inset, 0px 2px 5px;
     transition: .2s;
 }
 
 .wallet__content{
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
 }
 .overflow-container-deposit{
-	overflow: hidden;
-	width: 89%;
-	position: relative;
-	margin: 0 auto;
+  overflow: hidden;
+  width: 89%;
+  position: relative;
+  margin: 0 auto;
 }
 .overflow-wraper-deposit{
-	width: 201%;
-	transition: .4s;
-	transform: translateX(0%);
-	display: flex;
-	justify-content: center;
+  width: 201%;
+  transition: .4s;
+  transform: translateX(0%);
+  display: flex;
+  justify-content: center;
 }
 .deposit-panel{
-	font-family: 'Stolzl','sans-serif';
-	margin-bottom: 20px;
+  font-family: 'Stolzl','sans-serif';
+  margin-bottom: 20px;
 }
 .deposit-panel__title{
-	display: block;
-	padding: 11px 0 0 11px;
+  display: block;
+  padding: 11px 0 0 11px;
 }
 .exchange-item{
-	position: relative;
-	font-size: 24px;
-	color: #1f3262;
-	padding-left: 45px;
+  position: relative;
+  font-size: 24px;
+  color: #1f3262;
+  padding-left: 45px;
 }
 .exchange-item::before{
-	content: '';
-	border-radius: 50%;
-	display: inline-block;
-	width: 38px;
-	position: absolute;
-	left: -2px;
-	top: 0px;
-	height: 38px;
-	background-image: url('../../../common/images/icons/bitcoin-icon.jpg');
-	background-repeat: no-repeat;
-	background-size: contain;
-	background-position: center;
+  content: '';
+  border-radius: 50%;
+  display: inline-block;
+  width: 38px;
+  position: absolute;
+  left: -2px;
+  top: 0px;
+  height: 38px;
+  background-image: url('../../../common/images/icons/bitcoin-icon.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 .exchange-item::after{
-	content: 'Coin';
-	display: inline-block;
-	position: absolute;
-	top: 22px;
-	left: 45px;
-	font-size: 18px;
-	opacity: 0.3;
+  content: 'Coin';
+  display: inline-block;
+  position: absolute;
+  top: 22px;
+  left: 45px;
+  font-size: 18px;
+  opacity: 0.3;
 }
 .exchange-value{
     font-size: 21px;
@@ -100,102 +100,102 @@
     padding-left: 18px;
 }
 .address-display{
-	    width: 70%;
+      width: 70%;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
 .slide-buttons{
-	margin: 0 auto;
-	width: max-content;
+  margin: 0 auto;
+  width: max-content;
 }
 
 .deposit-item{
-	transition: .4s ease-in-out;
-	margin: 24px auto 0px;
-	text-align: center;
-	font-family: 'Stolzl Book';
-	font-size:;
-	padding: 10px;
-	position: relative;
-	max-width: 670px;
-	background-color: #fff;
-	box-shadow: 0px 56px 27px -42px #000000, inset 0px 0px 50px -50px  #000000;
-	border-radius: 50px;
-	box-sizing: border-box;
-	border: 0.04rem solid rgba(1,1,1,0.1);
+  transition: .4s ease-in-out;
+  margin: 24px auto 0px;
+  text-align: center;
+  font-family: 'Stolzl Book';
+  font-size:;
+  padding: 10px;
+  position: relative;
+  max-width: 670px;
+  background-color: #fff;
+  box-shadow: 0px 56px 27px -42px #000000, inset 0px 0px 50px -50px  #000000;
+  border-radius: 50px;
+  box-sizing: border-box;
+  border: 0.04rem solid rgba(1,1,1,0.1);
 }
 .deposit-item:hover{
-	box-shadow: 0px 56px 27px -42px #000000, inset 0px 0px 18px -12px #000000;
+  box-shadow: 0px 56px 27px -42px #000000, inset 0px 0px 18px -12px #000000;
 }
 .withdraw.deposit-item{
-	border: 0;
-	display: flex;
-	flex-flow: wrap row;
-	justify-content: space-around;
-	background: -moz-linear-gradient(top,  rgba(30,87,153,0.29) 0%, rgba(158,129,196,0.33) 27%, rgba(82,147,201,0.4) 77%, rgba(123,183,231,0.43) 99%, rgba(125,185,232,0.43) 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(top,  rgba(30,87,153,0.29) 0%,rgba(158,129,196,0.33) 27%,rgba(82,147,201,0.4) 77%,rgba(123,183,231,0.43) 99%,rgba(125,185,232,0.43) 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to top,  rgb(26, 39, 72) 8%,rgba(158, 129, 196, 0.77) 29%,rgba(82, 147, 201, 0.79) 12%,rgba(208, 123, 231, 0.85) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4a1e5799', endColorstr='#6e7db9e8',GradientType=0 ); /* IE6-9 */
+  border: 0;
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: space-around;
+  background: -moz-linear-gradient(top,  rgba(30,87,153,0.29) 0%, rgba(158,129,196,0.33) 27%, rgba(82,147,201,0.4) 77%, rgba(123,183,231,0.43) 99%, rgba(125,185,232,0.43) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(30,87,153,0.29) 0%,rgba(158,129,196,0.33) 27%,rgba(82,147,201,0.4) 77%,rgba(123,183,231,0.43) 99%,rgba(125,185,232,0.43) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to top,  rgb(26, 39, 72) 8%,rgba(158, 129, 196, 0.77) 29%,rgba(82, 147, 201, 0.79) 12%,rgba(208, 123, 231, 0.85) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4a1e5799', endColorstr='#6e7db9e8',GradientType=0 ); /* IE6-9 */
 }
 .withdraw__address{
-	width: 100%;
-	margin-bottom: 7px;
+  width: 100%;
+  margin-bottom: 7px;
 }
 .withdraw__balance{
-	text-align: left;
+  text-align: left;
 }
 .balance__item{
-	display: inline-block;
-	padding-left: 40px;
-	font-size: 1.5rem;
-	position: relative;
-	font-family: "Stolzl";
-	margin-top: 13px;
+  display: inline-block;
+  padding-left: 40px;
+  font-size: 1.5rem;
+  position: relative;
+  font-family: "Stolzl";
+  margin-top: 13px;
 }
 .balance__item::before{
-	content:'';
-	display: block;
-	width: 30px;
-	height: 30px;
-	background-color: blue;
-	position: absolute;
-	left: 4px;
-	top: -7px;
+  content:'';
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: blue;
+  position: absolute;
+  left: 4px;
+  top: -7px;
 }
 .deposit-buttons{
-	text-align: center;
+  text-align: center;
 }
 .deposit-panel-buttons_active{
-	box-shadow: inset 0px 0px 3px 0px black;
+  box-shadow: inset 0px 0px 3px 0px black;
     border-radius: 4px;
 }
 .withdraw-title{
-	margin-top: 20px;
-	margin-bottom: 30px;
-	color: #ffffff;
-	font-size: 1.4rem;
-	text-shadow: 0px 0px 4px rgba(62, 42, 73, 0.9);
+  margin-top: 20px;
+  margin-bottom: 30px;
+  color: #ffffff;
+  font-size: 1.4rem;
+  text-shadow: 0px 0px 4px rgba(62, 42, 73, 0.9);
 }
 .overflow-container-deposit::before ,.overflow-container-deposit::after{
-	content: '';
-	display: block;
-	width: 10px;
-	height: 80%;
-	border-left: 1px solid rgba(0,0,0,0.61);
-	border-right: 1px solid rgba(0,0,0,0.61);
-	box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.6);
-	position: absolute;
-	background: transparent;
-	z-index: 10;
+  content: '';
+  display: block;
+  width: 10px;
+  height: 80%;
+  border-left: 1px solid rgba(0,0,0,0.61);
+  border-right: 1px solid rgba(0,0,0,0.61);
+  box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.6);
+  position: absolute;
+  background: transparent;
+  z-index: 10;
 }
 .overflow-container-deposit::before{
-	left: -2.2%;
-	top: 18px;
+  left: -2.2%;
+  top: 18px;
 }
 .overflow-container-deposit::after{
-	right: -2.5%;
-	top: 18px;
+  right: -2.5%;
+  top: 18px;
 }
 input.address__input {
     border: 0;
@@ -207,14 +207,14 @@ input.address__input {
     box-shadow: 2px 2px 2px 2px inset;
 }
 .withdraw-currency{
-	opacity: .3;
+  opacity: .3;
 }
 span.balance__value {
     font-size: 1.6rem;
     margin-left: 10px;
 }
 span.withdraw-value {
-	transition: .3s;
+  transition: .3s;
     font-size: 1.6rem;
     text-shadow: 0px 0px 6px #888;
 }
@@ -254,10 +254,13 @@ span.head__title::before{
     content: '';
     position: absolute;
     display: block;
-    width: 78px;
-    height: 78px;
-    left: 0px;
-    background-image: url("../icons/binance.jpg");
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    left: 21px;
+    top: 0px;
+    background-size: contain;
+    background-image: url('../../../common/images/icons/binance.jpg');
 }
 
 .head__total_balance {
@@ -296,13 +299,13 @@ span.head__title::before{
     background: linear-gradient(to top, rgb(26, 39, 72) 8%,rgba(255, 255, 255, 0.77) 19%,rgba(255, 255, 255, 0.79) 12%,rgba(208, 123, 231, 0.85) 100%);
 }
 .api_update{
-	border-radius: 0;
-	width: 101%;
-	text-shadow: 0px 0px 3px #fff;
-	color: #ffffff;
-	font-weight: 900;
-	height: 70px;
-	background-color: transparent;
+  border-radius: 0;
+  width: 101%;
+  text-shadow: 0px 0px 3px #fff;
+  color: #ffffff;
+  font-weight: 900;
+  height: 70px;
+  background-color: transparent;
 }
 .input_block__left_side {
     display: flex;
@@ -326,20 +329,20 @@ input.input_block__input {
     text-align: center;
 }
 .api-title{
-	color: #5b63b4
+  color: #5b63b4
 }
 
 button.reset {
-	border-radius: 0;
-	width: 100%;
-	padding: 0;
-	text-align: center;
-	border-left: 2px solid rgba(146, 152, 217, .3);
-	margin-top: 9px;
-	height: 78%;
-	font-weight: 900;
-	color: #5e28ac;
-	background-color: transparent;
+  border-radius: 0;
+  width: 100%;
+  padding: 0;
+  text-align: center;
+  border-left: 2px solid rgba(146, 152, 217, .3);
+  margin-top: 9px;
+  height: 78%;
+  font-weight: 900;
+  color: #5e28ac;
+  background-color: transparent;
 }
 .money_wraper {
     display: flex;
@@ -414,32 +417,32 @@ span.total_balance__title {
 }
 
 @media(max-width: 800px){
-	.withdraw__address .withdraw-title{
-		position: relative;
-		top: 15px;
-	}
-	li .button{
-		padding: 5px;
-	}
-	.deposit-item{
-		max-width: 450px;
-	}
+  .withdraw__address .withdraw-title{
+    position: relative;
+    top: 15px;
+  }
+  li .button{
+    padding: 5px;
+  }
+  .deposit-item{
+    max-width: 450px;
+  }
 
 }
 @media (max-width: 400px){
-	.overflow-container-deposit::before{
-		left: -3.8%;
-	}
-	.overflow-container-deposit::after{
-		right: -3.8%;
-	}
-	.deposit-item{
-		transform: scale(.79);
-	}
+  .overflow-container-deposit::before{
+    left: -3.8%;
+  }
+  .overflow-container-deposit::after{
+    right: -3.8%;
+  }
+  .deposit-item{
+    transform: scale(.79);
+  }
 
 }
 
-	/*RANGE*/
+  /*RANGE*/
 input[type=range].withdraw__range {
   -webkit-appearance: none;
   width: 100%;

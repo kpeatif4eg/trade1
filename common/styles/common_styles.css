@@ -12,19 +12,21 @@ button, select{
 .menu__button{
 	color: #ffffff;
 	font-family: 'Stolzl';
-	font-size: 12px;
+	font-size: 17px;
 	border: 0;
 	background-color: transparent;
 	padding-left: 39px;
 	white-space: nowrap;
 	width:100%;
+	overflow: hidden;
 	text-align: left;
+	text-overflow: ellipsis;
 }
 .slide-handle{
 	transition: .4s;
-	box-shadow: rgba(0, 0, 0, 0.75) 0px -6px 10px -4px inset, 0px 2px 5px ;
-	width: 70px;
-	border-radius: 10px;
+	box-shadow: rgba(0, 0, 0, 0.75) 0px -6px 10px -4px inset, 0px 2px 5px !important;
+	width: 70px !important;
+	border-radius: 10px !important;
 }
 .slider-button {
     box-shadow: rgba(0, 0, 0, 0.55) 0px -4.1px 10px -4px inset, black 0px 0px 2.2px -0.6px !important;

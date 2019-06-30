@@ -1,8 +1,8 @@
 (function(){
 	const template = `
 		<div class="trader-type-change">
-			<button class="trader-type-button slider-button button" value='0'>My traders</button>
-			<button class="trader-type-button slider-button button" value='1'>Traders Top</button>
+			<button class="trader-type-button slide-handle button" value='0'>Traders Top</button>
+			<button class="trader-type-button slide-handle button" value='1'>My traders</button>
 		</div>
 
 		<div class="subscribe-traders ">
@@ -30,8 +30,8 @@
 	})
 
 	function renderWorkingTraders(e){
-		elemArr.removeStyle(handleButtons, 'slide-handle');
-		e.target.classList.add('slide-handle')
+		elemArr.removeStyle(handleButtons, 'slider-button');
+		e.target.classList.add('slider-button')
 //чистим контейнер перед рендером
 		elem.getEl('.subscribe-traders').innerHTML = null;
 
@@ -168,8 +168,8 @@
 	};
 
 	function renderNormalTraders(e){
-		elemArr.removeStyle(handleButtons, 'slide-handle');
-		e.target.classList.add('slide-handle')
+		elemArr.removeStyle(handleButtons, 'slider-button');
+		e.target.classList.add('slider-button')
 //чистим контейнер перед рендером
 		elem.getEl('.subscribe-traders').innerHTML = null;
 //берем из кэша данные
@@ -188,6 +188,7 @@
 			const profitColor = profit > 0 ? COLOR_GREEN 
 						  : profit == 0 ? COLOR_GRAY
 						  : COLOR_RED;
+
 			const progressBarWidth = (available*100)/50;
 
 			const templateNoSubscribeTrader = 
@@ -238,16 +239,25 @@
 
 		elem.getElems('trader-type-button').forEach(item=>{
 			if(item.value == 0){
-				item.addEventListener('click', renderNormalTraders)
+				item.addEventListener('click', renderNormalTraders);
+
 			}
 			else{
 				item.addEventListener('click', renderWorkingTraders);
 			}
+
 		})
 
 	})
 
 	render.styles('modules/Content/Trader');
   
-    global.setTmpl(template);
+    global.setTmpl(template, function(){
+    	setTimeout(()=>{
+	    	elem.getElems('trader-type-button')[0].click();
+
+    	}, 100)
+    });
+    global.getTmpl();
+
 }())
